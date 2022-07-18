@@ -1,0 +1,88 @@
+div.login-form-container
+{
+  width: 450px;
+  height: 660px;
+  padding: 60px 40px 68px 40px;
+  margin-bottom: 90px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form.login-form-main
+{
+  width: 315px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+h2.login-form-title
+{
+  font-size: 32px;
+  margin-bottom: 28px;
+}
+
+div.user-info-container, div.user-password-container
+{
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+form.login-form-main input
+{
+  height: 50px;
+  width: 100%;
+  padding: 16px 20px 0 20px;
+  background-color: #333333;
+  border: none;
+  border-radius: 5px;
+}
+
+button.login-form-submit-button
+{
+  height: 50px;
+  margin: 24px 0 12px 0;
+  padding: 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+div.login-form-main-bottom-row
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #b3b3b3;
+}
+
+div.login-form-checkbox-container
+{
+  width: 200px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+}
+
+#login-user-remember
+{
+  width: 16px;
+  height: 16px;
+  margin: 5px 5px 5px 0;
+}
+
+div.login-form-checkbox-container label
+{
+  width: 100%;
+}
+
+a.login-form-help-link
+{
+  margin-top: 2.5px;
+  color: #b3b3b3;
+}

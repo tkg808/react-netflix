@@ -1,6 +1,7 @@
 import './Login.css';
 import { Link } from 'react-router-dom';
 import { IoGlobeOutline } from 'react-icons/io5';
+import LoginForm from '../loginForm/LoginForm';
 
 export default function Login()
 {
@@ -19,9 +20,7 @@ export default function Login()
         </Link>
       </header>
       <div className="login-body">
-        <form className="login-form">
-
-        </form>
+        <LoginForm />
       </div>
       <div className="footer-container">
         <footer className="login-footer">
