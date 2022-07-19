@@ -86,3 +86,39 @@ a.login-form-help-link
   margin-top: 2.5px;
   color: #b3b3b3;
 }
+
+div.login-form-other
+{
+  width: 315px;
+  height: 180px;
+}
+
+div.login-signup-container
+{
+  font-size: 16px;
+  color: #737373;
+  margin-top: 16px;
+}
+
+a.login-form-signup-link
+{
+  color: white;
+}
+
+div.recaptcha-container
+{
+  width: 100%;
+  margin: 13px 0;
+}
+
+p.recaptcha-text
+{
+  width: 285px;
+  font-size: 13px;
+  color: #8c8c8c;
+}
+
+a.recaptcha-terms-of-use-link
+{
+  color: #0071EB;
+}
