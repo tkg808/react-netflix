@@ -14,6 +14,8 @@ export default function LoginForm({ })
     })
   const [validContact, setValidContact] = useState(false);
   const [validPassword, setValidPassword] = useState(false);
+  const [activeContactInput, setActiveContactInput] = useState(false);
+  const [activePasswordInput, setActivePasswordInput] = useState(false);
 
   function handleChange(event)
   {
@@ -55,23 +57,37 @@ export default function LoginForm({ })
         <h2 className="login-form-title">
           Sign In
         </h2>
-        <div className="login-form-user-contact-input-container">
-          <input
-            type="text"
-            name="contactInfo"
-            id="login-form-user-contact-input"
-            value={formData.username}
-            onChange={handleChange} />
-          <label htmlFor="login-form-user-contact-input">Email or phone number</label>
+        <div
+          className="login-form-user-contact-container"
+          onClick={() => setActiveContactInput(true)}>
+          <div className={`login-form-user-contact-label-container ${(activeContactInput || formData.contactInfo) && "shrink"}`}>
+            <label htmlFor="login-form-user-contact-input">
+              Email or phone number
+              <input
+                type="text"
+                name="contact"
+                className={(activeContactInput || formData.contactInfo) && "active"}
+                id="login-form-user-contact-input"
+                value={formData.username}
+                onChange={handleChange}
+                onBlur={() => setActiveContactInput(false)} />
+            </label>
+          </div>
         </div>
-        <div className="login-form-user-password-input-container">
-          <input
-            type="text"
-            name="password"
-            id="login-form-user-password-input"
-            value={formData.password}
-            onChange={handleChange} />
-          <label htmlFor="login-form-user-password-input">Password</label>
+        <div
+          className="login-form-user-password-container"
+          onClick={() => setActivePasswordInput(true)}>
+          <div className={`login-form-user-password-label-container ${(activePasswordInput || formData.password) && "shrink"}`}>
+            <label htmlFor="login-form-user-password-input">Password</label>
+            <input
+              type="text"
+              name="password"
+              className={(activePasswordInput || formData.password) && "active"}
+              id="login-form-user-password-input"
+              value={formData.password}
+              onChange={handleChange}
+              onBlur={() => setActivePasswordInput(false)} />
+          </div>
         </div>
         <button className="login-form-submit-button">Sign In</button>
         <div className="login-form-main-bottom-row">

@@ -26,20 +26,56 @@ h2.login-form-title
   margin-bottom: 28px;
 }
 
-div.user-info-container, div.user-password-container
-{
-  width: 100%;
-  padding-bottom: 16px;
-}
-
-form.login-form-main input
+div.login-form-user-contact-container,
+div.login-form-user-password-container
 {
   height: 50px;
   width: 100%;
-  padding: 16px 20px 0 20px;
+  margin-bottom: 16px;
+  padding: 0 20px;
+  background-color: #333333;
+  border-radius: 5px;
+}
+
+div.login-form-user-contact-label-container,
+div.login-form-user-password-label-container
+{
+  width: 100%;
+  color: #8C8C8C;
+  padding-top: 16px;
+  font-size: 16px;
+  transition: padding-top 0.3s, font-size 0.3s;
+}
+
+div.login-form-user-contact-label-container.shrink,
+div.login-form-user-password-label-container.shrink
+{
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+div.login-form-user-contact-label-container input,
+div.login-form-user-password-label-container input
+{
+  height: 0;
+  width: 100%;
+  color: white;
+  font-size: 16px;
   background-color: #333333;
   border: none;
-  border-radius: 5px;
+  transition: height 0.3s;
+}
+
+div.login-form-user-contact-label-container input.active,
+div.login-form-user-password-label-container input.active
+{
+  height: 30px;
+}
+
+div.login-form-user-contact-label-container input:focus,
+div.login-form-user-password-label-container input:focus
+{
+  outline: none;
 }
 
 button.login-form-submit-button
