@@ -1,4 +1,4 @@
-const validateEmail = function (email)
+function validateEmail(email)
 {
   const LENGTH = email.length;
 
@@ -29,7 +29,7 @@ const validateEmail = function (email)
   return (hasDot && hasAt);
 }
 
-const validatePhone = function (phone)
+function validatePhone(phone)
 {
   const LENGTH = phone.length;
 
@@ -50,7 +50,7 @@ const validatePhone = function (phone)
   return true;
 }
 
-const validatePassword = function (password)
+function validatePassword(password)
 {
   const LENGTH = password.length;
 
