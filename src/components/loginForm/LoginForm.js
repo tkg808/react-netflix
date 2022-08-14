@@ -2,16 +2,18 @@ import './LoginForm.css';
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../Contexts';
+import { validateEmail, validatePhone, validatePassword } from '../../hooks/useValidation';
 
-export default function LoginForm()
+export default function LoginForm({ })
 {
+  const { setIsLoggedIn } = useContext(UserContext);
   const [formData, setFormData] = useState(
     {
-      username: null,
-      password: null,
+      contactInfo: "",
+      password: "",
     })
-
-  const { username, setUsername, setIsPassword } = useContext(UserContext);
+  const [validContact, setValidContact] = useState(false);
+  const [validPassword, setValidPassword] = useState(false);
 
   function handleChange(event)
   {
@@ -21,15 +23,42 @@ export default function LoginForm()
     });
   }
 
+  function handleSubmit(event)
+  {
+    event.preventDefault();
+
+    if (validContact && validPassword)
+    {
+      // setIsLoggedIn(true);
+      console.log("User is logged in!");
+    }
+    else
+    {
+      console.log("Please enter valid login info", formData);
+    }
+  }
+
+  useEffect(() =>
+  {
+    validateEmail(formData.contactInfo) || validatePhone(formData.contactInfo) ?
+      setValidContact(true) :
+      setValidContact(false);
+
+    validatePassword(formData.password) ?
+      setValidPassword(true) :
+      setValidPassword(false);
+  }, [formData]);
+
   return (
     <div className="login-form-container">
-      <form className="login-form-main" onSubmit={() => null}>
+      <form className="login-form-main" onSubmit={handleSubmit}>
         <h2 className="login-form-title">
           Sign In
         </h2>
         <div className="login-form-user-contact-input-container">
           <input
             type="text"
+            name="contactInfo"
             id="login-form-user-contact-input"
             value={formData.username}
             onChange={handleChange} />
@@ -38,6 +67,7 @@ export default function LoginForm()
         <div className="login-form-user-password-input-container">
           <input
             type="text"
+            name="password"
             id="login-form-user-password-input"
             value={formData.password}
             onChange={handleChange} />
