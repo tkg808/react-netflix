@@ -9,7 +9,7 @@ export default function LoginForm({ })
   const { setIsLoggedIn } = useContext(UserContext);
   const [formData, setFormData] = useState(
     {
-      contactInfo: "",
+      contact: "",
       password: "",
     })
   const [validContact, setValidContact] = useState(false);
@@ -42,7 +42,7 @@ export default function LoginForm({ })
 
   useEffect(() =>
   {
-    validateEmail(formData.contactInfo) || validatePhone(formData.contactInfo) ?
+    validateEmail(formData.contact) || validatePhone(formData.contact) ?
       setValidContact(true) :
       setValidContact(false);
 
@@ -60,24 +60,24 @@ export default function LoginForm({ })
         <div
           className="login-form-user-contact-container"
           onClick={() => setActiveContactInput(true)}>
-          <div className={`login-form-user-contact-label-container ${(activeContactInput || formData.contactInfo) && "shrink"}`}>
+          <div className={`login-form-user-contact-placement-container ${(activeContactInput || formData.contact) && "shrink"}`}>
             <label htmlFor="login-form-user-contact-input">
               Email or phone number
-              <input
-                type="text"
-                name="contact"
-                className={(activeContactInput || formData.contactInfo) && "active"}
-                id="login-form-user-contact-input"
-                value={formData.username}
-                onChange={handleChange}
-                onBlur={() => setActiveContactInput(false)} />
             </label>
+            <input
+              type="text"
+              name="contact"
+              className={(activeContactInput || formData.contact) && "active"}
+              id="login-form-user-contact-input"
+              value={formData.contact}
+              onChange={handleChange}
+              onBlur={() => setActiveContactInput(false)} />
           </div>
         </div>
         <div
           className="login-form-user-password-container"
           onClick={() => setActivePasswordInput(true)}>
-          <div className={`login-form-user-password-label-container ${(activePasswordInput || formData.password) && "shrink"}`}>
+          <div className={`login-form-user-password-placement-container ${(activePasswordInput || formData.password) && "shrink"}`}>
             <label htmlFor="login-form-user-password-input">Password</label>
             <input
               type="text"

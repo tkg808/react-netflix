@@ -37,8 +37,8 @@ div.login-form-user-password-container
   border-radius: 5px;
 }
 
-div.login-form-user-contact-label-container,
-div.login-form-user-password-label-container
+div.login-form-user-contact-placement-container,
+div.login-form-user-password-placement-container
 {
   width: 100%;
   color: #8C8C8C;
@@ -47,15 +47,15 @@ div.login-form-user-password-label-container
   transition: padding-top 0.3s, font-size 0.3s;
 }
 
-div.login-form-user-contact-label-container.shrink,
-div.login-form-user-password-label-container.shrink
+div.login-form-user-contact-placement-container.shrink,
+div.login-form-user-password-placement-container.shrink
 {
   padding-top: 5px;
   font-size: 12px;
 }
 
-div.login-form-user-contact-label-container input,
-div.login-form-user-password-label-container input
+div.login-form-user-contact-placement-container input,
+div.login-form-user-password-placement-container input
 {
   height: 0;
   width: 100%;
@@ -66,14 +66,14 @@ div.login-form-user-password-label-container input
   transition: height 0.3s;
 }
 
-div.login-form-user-contact-label-container input.active,
-div.login-form-user-password-label-container input.active
+div.login-form-user-contact-placement-container input.active,
+div.login-form-user-password-placement-container input.active
 {
   height: 30px;
 }
 
-div.login-form-user-contact-label-container input:focus,
-div.login-form-user-password-label-container input:focus
+div.login-form-user-contact-placement-container input:focus,
+div.login-form-user-password-placement-container input:focus
 {
   outline: none;
 }
