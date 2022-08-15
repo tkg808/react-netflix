@@ -58,9 +58,13 @@ export default function LoginForm({ })
           Sign In
         </h2>
         <div
-          className="login-form-user-contact-container"
+          className={`login-form-user-contact-container
+          ${((!validContact) && " error")}`}
           onClick={() => setActiveContactInput(true)}>
-          <div className={`login-form-user-contact-placement-container ${(activeContactInput || formData.contact) && "shrink"}`}>
+          <div
+            className={`login-form-user-contact-placement-container
+            ${(activeContactInput || formData.contact) && " shrink"}`}
+          >
             <label htmlFor="login-form-user-contact-input">
               Email or phone number
             </label>
@@ -73,11 +77,19 @@ export default function LoginForm({ })
               onChange={handleChange}
               onBlur={() => setActiveContactInput(false)} />
           </div>
+          {!validContact &&
+            <p className="login-form-user-contact-error-message">
+              Please enter a valid email or phone number.
+            </p>
+          }
         </div>
         <div
-          className="login-form-user-password-container"
+          className={`login-form-user-password-container
+          ${((!validPassword) && " error")}`}
           onClick={() => setActivePasswordInput(true)}>
-          <div className={`login-form-user-password-placement-container ${(activePasswordInput || formData.password) && "shrink"}`}>
+          <div
+            className={`login-form-user-password-placement-container
+            ${(activePasswordInput || formData.password) && " shrink"}`}>
             <label htmlFor="login-form-user-password-input">Password</label>
             <input
               type="text"
@@ -88,6 +100,11 @@ export default function LoginForm({ })
               onChange={handleChange}
               onBlur={() => setActivePasswordInput(false)} />
           </div>
+          {!validPassword &&
+            <p className="login-form-user-password-error-message">
+              Your password must contain between 4 and 60 characters.
+            </p>
+          }
         </div>
         <button className="login-form-submit-button">Sign In</button>
         <div className="login-form-main-bottom-row">

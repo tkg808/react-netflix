@@ -32,17 +32,23 @@ div.login-form-user-password-container
   height: 50px;
   width: 100%;
   margin-bottom: 16px;
-  padding: 0 20px;
   background-color: #333333;
   border-radius: 5px;
+}
+
+div.login-form-user-contact-container.error,
+div.login-form-user-password-container.error
+{
+  border-bottom: 1px solid #e87c03;
 }
 
 div.login-form-user-contact-placement-container,
 div.login-form-user-password-placement-container
 {
+  height: 50px;
   width: 100%;
   color: #8C8C8C;
-  padding-top: 16px;
+  padding: 16px 20px 0 20px;
   font-size: 16px;
   transition: padding-top 0.3s, font-size 0.3s;
 }
@@ -52,6 +58,14 @@ div.login-form-user-password-placement-container.shrink
 {
   padding-top: 5px;
   font-size: 12px;
+}
+
+p.login-form-user-contact-error-message,
+p.login-form-user-password-error-message
+{
+  padding: 2px 4px;
+  color: #e87c03;
+  font-size: 8px;
 }
 
 div.login-form-user-contact-placement-container input,
@@ -69,7 +83,7 @@ div.login-form-user-password-placement-container input
 div.login-form-user-contact-placement-container input.active,
 div.login-form-user-password-placement-container input.active
 {
-  height: 30px;
+  height: 28px;
 }
 
 div.login-form-user-contact-placement-container input:focus,
