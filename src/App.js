@@ -1,9 +1,9 @@
 import './App.css';
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { UserContext } from './components/Contexts';
+import { UserContext } from './hooks/Contexts';
 import Landing from './pages/landing/Landing';
-import Login from './components/login/Login';
+import Login from './pages/login/Login';
 
 export default function App()
 {
