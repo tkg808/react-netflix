@@ -39,7 +39,7 @@ div.login-form-user-password-container
 div.login-form-user-contact-container.error,
 div.login-form-user-password-container.error
 {
-  border-bottom: 1px solid #e87c03;
+  border-bottom: 2px solid #e87c03;
 }
 
 div.login-form-user-contact-placement-container,
