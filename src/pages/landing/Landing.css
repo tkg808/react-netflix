@@ -1,0 +1,159 @@
+div.landing-page-container
+{
+  color: white;
+}
+
+div.landing-page-container h1
+{
+  font-size: 50px;
+}
+
+div.landing-page-container h2
+{
+  font-size: 26px;
+}
+
+div.landing-page-container h3
+{
+  font-size: 19px;
+}
+
+div.landing-page-background-container
+{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+img.landing-page-background-image
+{
+  min-width: 1280px;
+  max-width: 100%;
+  height: auto;
+}
+
+div.landing-page-background-gradient-container
+{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0, transparent 60%,rgba(0,0,0,.8));
+  object-fit: scale-down;
+}
+
+div.landing-page-cards-container
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.landing-page-card-container
+{
+  width: 100%;
+  padding: 70px 45px;
+  display: flex;
+  justify-content: center;
+}
+
+div.landing-page-hero-card-content
+{
+  width: 100%;
+  padding: 75px 0;
+}
+
+div.landing-page-hero-card-content h1, h2, h3
+{
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.1;
+}
+
+h2.landing-page-hero-card-subtitle
+{
+  margin: 16px auto;
+}
+
+form.landing-page-hero-card-form
+{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.landing-page-hero-card-form-row-container
+{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+div.landing-page-hero-card-form-email-container
+{
+  height: 60px;
+  width: 65%;
+  margin-bottom: 16px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+div.landing-page-hero-card-form-email-placement-container
+{
+  height: 60px;
+  width: 100%;
+  color: #8C8C8C;
+  padding: 20px 20px 0 20px;
+  font-size: 16px;
+  transition: padding-top 0.3s, font-size 0.3s;
+}
+
+div.landing-page-hero-card-form-email-placement-container.shrink
+{
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+div.landing-page-hero-card-form-email-placement-container input
+{
+  height: 0;
+  width: 100%;
+  color: black;
+  font-size: 16px;
+  background-color: white;
+  border: none;
+  transition: height 0.3s;
+}
+
+div.landing-page-hero-card-form-email-placement-container input.active
+{
+  height: 35px;
+}
+
+div.landing-page-hero-card-form-email-placement-container input:focus
+{
+  outline: none;
+}
+
+button.landing-page-hero-card-form-button
+{
+  width: 35%;
+  height: 60px;
+  padding: 8px 25px;
+  color: white;
+  font-size: 26px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 5px;
+}
