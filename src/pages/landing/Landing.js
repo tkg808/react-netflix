@@ -36,47 +36,46 @@ export default function Landing()
       <div className="landing-page-cards-container">
         <div
           className="landing-page-card-container landing-page-hero-card-container">
-          <div className="landing-page-hero-card-content">
-            <h1 className="landing-page-hero-card-title">
+          <div className="landing-page-hero-card-content-container">
+            <h1 className="landing-page-hero-card-content-title">
               Unlimited movies, TV shows, and more.
             </h1>
-            <h2 className="landing-page-hero-card-subtitle">
+            <h2 className="landing-page-hero-card-content-subtitle">
               Watch anywhere. Cancel anytime.
             </h2>
-            <form className="landing-page-hero-card-form">
-              <h3 className="landing-page-hero-card-form-title">
+            <form className="landing-page-hero-card-content-form">
+              <h3 className="landing-page-hero-card-content-form-title">
                 Ready to watch? Enter your email to create or restart your membership.
               </h3>
-              <div className="landing-page-hero-card-form-row-container">
+              <div className="landing-page-hero-card-content-form-row-container">
                 <div
-                  className={`landing-page-hero-card-form-email-container
+                  className={`landing-page-hero-card-content-form-email-container
                   ${((!validEmail) && " error")}`}
                   onClick={() => setActiveInput(true)}>
                   <div
-                    className={`landing-page-hero-card-form-email-placement-container
+                    className={`landing-page-hero-card-content-form-email-placement-container
                     ${(activeInput || emailInput) && " shrink"}`}
                   >
-                    <label htmlFor="landing-page-hero-card-form-email-input">
+                    <label htmlFor="landing-page-hero-card-content-form-email-input">
                       Email address
                     </label>
                     <input
                       type="text"
                       name="email"
                       className={(activeInput || emailInput) && "active"}
-                      id="landing-page-hero-card-form-email-input"
+                      id="landing-page-hero-card-content-form-email-input"
                       value={emailInput}
                       onChange={(e) => setEmailInput(e.target.value)}
                       onBlur={() => setActiveInput(false)} />
                   </div>
-                  {/* {!validEmail &&
+                  {!validEmail &&
                     <p className="landing-page-hero-card-form-email-error-message">
                       Please enter a valid email or phone number.
                     </p>
-                  } */}
-
+                  }
                 </div>
-                <button className="landing-page-hero-card-form-button">
-                  Get Started
+                <button className="landing-page-hero-card-content-form-button">
+                  <span>Get Started</span>
                 </button>
               </div>
 

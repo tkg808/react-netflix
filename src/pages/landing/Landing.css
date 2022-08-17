@@ -3,21 +3,6 @@ div.landing-page-container
   color: white;
 }
 
-div.landing-page-container h1
-{
-  font-size: 50px;
-}
-
-div.landing-page-container h2
-{
-  font-size: 26px;
-}
-
-div.landing-page-container h3
-{
-  font-size: 19px;
-}
-
 div.landing-page-background-container
 {
   display: flex;
@@ -65,95 +50,121 @@ div.landing-page-card-container
   justify-content: center;
 }
 
-div.landing-page-hero-card-content
+div.landing-page-hero-card-content-container
 {
   width: 100%;
   padding: 75px 0;
-}
-
-div.landing-page-hero-card-content h1, h2, h3
-{
-  width: 600px;
-  margin: 0 auto;
-  text-align: center;
   line-height: 1.1;
 }
 
-h2.landing-page-hero-card-subtitle
+h1.landing-page-hero-card-content-title
 {
+  max-width: 640px;
   margin: 16px auto;
+  font-size: 52px;
+  text-align: center;
 }
 
-form.landing-page-hero-card-form
+h2.landing-page-hero-card-content-subtitle
+{
+  max-width: 640px;
+  margin: 16px auto;
+  font-size: 26px;
+  font-weight: 400;
+  text-align: center;
+}
+
+form.landing-page-hero-card-content-form
 {
   width: 100%;
+  padding-top: 14px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-div.landing-page-hero-card-form-row-container
+h3.landing-page-hero-card-content-form-title
 {
-  width: 50%;
+  padding: 0 5% 20px 5%;
+  margin: 0 auto;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+}
+
+div.landing-page-hero-card-content-form-row-container
+{
   display: flex;
   justify-content: center;
 }
 
-div.landing-page-hero-card-form-email-container
+div.landing-page-hero-card-content-form-email-container
 {
   height: 60px;
-  width: 65%;
+  width: 450px;
   margin-bottom: 16px;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
-div.landing-page-hero-card-form-email-placement-container
+div.landing-page-hero-card-content-form-email-container.error
+{
+  border-bottom: 2px solid #ffa00a;
+}
+
+div.landing-page-hero-card-content-form-email-placement-container
 {
   height: 60px;
   width: 100%;
+  padding: 20px 10px 0 10px;
   color: #8C8C8C;
-  padding: 20px 20px 0 20px;
-  font-size: 16px;
+  font-size: 18px;
   transition: padding-top 0.3s, font-size 0.3s;
 }
 
-div.landing-page-hero-card-form-email-placement-container.shrink
+div.landing-page-hero-card-content-form-email-placement-container.shrink
 {
   padding-top: 5px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
-div.landing-page-hero-card-form-email-placement-container input
+div.landing-page-hero-card-content-form-email-placement-container input
 {
   height: 0;
   width: 100%;
   color: black;
-  font-size: 16px;
+  font-size: 18px;
   background-color: white;
   border: none;
   transition: height 0.3s;
 }
 
-div.landing-page-hero-card-form-email-placement-container input.active
+div.landing-page-hero-card-content-form-email-placement-container input.active
 {
   height: 35px;
 }
 
-div.landing-page-hero-card-form-email-placement-container input:focus
+div.landing-page-hero-card-content-form-email-placement-container input:focus
 {
   outline: none;
 }
 
-button.landing-page-hero-card-form-button
+p.landing-page-hero-card-form-email-error-message
+{
+  padding: 6px 3px;
+  color: #b92d2b;
+  font-size: 14px;
+}
+
+button.landing-page-hero-card-content-form-button
 {
   width: 35%;
   height: 60px;
   padding: 8px 25px;
   color: white;
-  font-size: 26px;
+  font-size: 20px;
   background-color: #e50914;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
 }
