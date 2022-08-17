@@ -19,13 +19,6 @@ export default function Landing()
 
   return (
     <div className="landing-page-container">
-      <div className="landing-page-background-container">
-        <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/1ef84595-1fdb-4404-adac-15215ceeb3ae/9b7e4892-200e-4740-909b-cdd33763fe9f/US-en-20220711-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
-          alt="landing-page-background-image"
-          className="landing-page-background-image" />
-        <div className="landing-page-background-gradient-container" />
-      </div>
       <header className="landing-page-header-container">
         <Link to="" className="logo-signup-link">
           <svg viewBox="0 0 111 30" className="svg-icon svg-icon-netflix-logo" aria-hidden="true" focusable="false">
@@ -36,6 +29,13 @@ export default function Landing()
       <div className="landing-page-cards-container">
         <div
           className="landing-page-card-container landing-page-hero-card-container">
+          <div className="landing-page-background-container">
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/vlv3/1ef84595-1fdb-4404-adac-15215ceeb3ae/9b7e4892-200e-4740-909b-cdd33763fe9f/US-en-20220711-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
+              alt="landing-page-background-image"
+              className="landing-page-background-image" />
+            <div className="landing-page-background-gradient-container" />
+          </div>
           <div className="landing-page-hero-card-content-container">
             <h1 className="landing-page-hero-card-content-title">
               Unlimited movies, TV shows, and more.
