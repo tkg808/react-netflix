@@ -27,8 +27,7 @@ export default function Landing()
         </Link>
       </header>
       <div className="landing-page-cards-container">
-        <div
-          className="landing-page-hero-card-container">
+        <div className="landing-page-hero-card-container">
           <div className="landing-page-background-container">
             <img
               src="https://assets.nflxext.com/ffe/siteui/vlv3/1ef84595-1fdb-4404-adac-15215ceeb3ae/9b7e4892-200e-4740-909b-cdd33763fe9f/US-en-20220711-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
@@ -85,17 +84,13 @@ export default function Landing()
           <div className="landing-page-card-content-container">
             <div className="landing-page-card-content-text-container">
               <h1>Enjoy on your TV.</h1>
-              <h2>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray, players, and more.</h2>
+              <h2>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h2>
             </div>
             <div className="landing-page-card-content-image-container">
               <div className="landing-page-card-content-animation-container">
                 <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="landing-page-card-content-image" />
                 <div className="landing-page-card-content-animation">
-                  <video
-                    autoPlay
-                    playsInline
-                    muted
-                    loop>
+                  <video autoPlay playsInline muted loop>
                     <source
                       src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
                       type="video/mp4" />
@@ -112,8 +107,8 @@ export default function Landing()
           </div>
         </div>
         <div className="landing-page-card-container">
-          <div className="landing-page-card-content-container">
-            <div className="landing-page-card-content-text-container">
+          <div className="landing-page-card-content-container flipped">
+            <div className="landing-page-card-content-text-container flipped">
               <h1>Download your shows to watch offline.</h1>
               <h2>Save your favorites easily and always have something to watch.</h2>
             </div>
@@ -163,8 +158,8 @@ export default function Landing()
           </div>
         </div>
         <div className="landing-page-card-container">
-          <div className="landing-page-card-content-container">
-            <div className="landing-page-card-content-text-container">
+          <div className="landing-page-card-content-container flipped">
+            <div className="landing-page-card-content-text-container flipped">
               <h1>Create profiles for kids.</h1>
               <h2>Send kids on adventures with their favorite characters in a space made just for them-free with your membership.</h2>
             </div>

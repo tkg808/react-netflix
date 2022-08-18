@@ -190,6 +190,11 @@ div.landing-page-card-content-container
   align-items: center;
 }
 
+div.landing-page-card-content-container.flipped
+{
+  flex-flow: row-reverse;
+}
+
 div.landing-page-card-content-text-container
 {
   height: 100%;
@@ -197,6 +202,11 @@ div.landing-page-card-content-text-container
   padding: 0 3rem 0 0;
   z-index: 3;
   flex: 0 1 auto;
+}
+
+div.landing-page-card-content-text-container.flipped
+{
+  padding: 0 0 0 3rem;
 }
 
 div.landing-page-card-content-text-container h1
