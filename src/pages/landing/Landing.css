@@ -173,3 +173,84 @@ button.landing-page-hero-card-content-form-button
   border: none;
   border-radius: 2px;
 }
+
+div.landing-page-card-container
+{
+  padding: 70px 45px;
+  position: relative;
+  background-color: black;
+  border-bottom: 8px solid #222;
+}
+
+div.landing-page-card-content-container
+{
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.landing-page-card-content-text-container
+{
+  height: 100%;
+  width: 52%;
+  padding: 0 3rem 0 0;
+  z-index: 3;
+  flex: 0 1 auto;
+}
+
+div.landing-page-card-content-text-container h1
+{
+  margin-bottom: 0.5rem;
+  font-size: 3.125rem;
+  line-height: 1.1;
+}
+
+div.landing-page-card-content-text-container h2
+{
+  margin: 0.75em 0 0.25em 0;
+  font-size: 1.625rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+div.landing-page-card-content-animation-container
+{
+  height: 100%;
+  width: 48%;
+  display: flex;
+  flex: 0 1 auto;
+}
+
+div.landing-page-card-content-animation-placement
+{
+  margin: -10% -5% -5% 0;
+  position: relative;
+  overflow: hidden;
+}
+
+div.landing-page-card-content-animation-placement img
+{
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+div.landing-page-card-content-animation-video-container
+{
+  height: 100%;
+  max-height: 54%;
+  width: 100%;
+  max-width: 73%;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.landing-page-card-content-animation-video-container video
+{
+  height: 100%;
+  width: 100%;
+}

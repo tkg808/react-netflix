@@ -28,7 +28,7 @@ export default function Landing()
       </header>
       <div className="landing-page-cards-container">
         <div
-          className="landing-page-card-container landing-page-hero-card-container">
+          className="landing-page-hero-card-container">
           <div className="landing-page-background-container">
             <img
               src="https://assets.nflxext.com/ffe/siteui/vlv3/1ef84595-1fdb-4404-adac-15215ceeb3ae/9b7e4892-200e-4740-909b-cdd33763fe9f/US-en-20220711-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
@@ -78,13 +78,33 @@ export default function Landing()
                   <span>Get Started</span>
                 </button>
               </div>
-
             </form>
           </div>
         </div>
         <div
-          className="landing-page-card-container landing-page-animation-card-container">
-
+          className="landing-page-card-container">
+          <div className="landing-page-card-content-container">
+            <div className="landing-page-card-content-text-container">
+              <h1>Enjoy on your TV.</h1>
+              <h2>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray, players, and more.</h2>
+            </div>
+            <div className="landing-page-card-content-animation-container">
+              <div className="landing-page-card-content-animation-placement">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="landing-page-card-content-image" />
+                <div className="landing-page-card-content-animation-video-container">
+                  <video
+                    autoPlay
+                    playsInline
+                    muted
+                    loop>
+                    <source
+                      src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
+                      type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           className="landing-page-card-container landing-page-animation-card-container">
