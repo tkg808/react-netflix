@@ -19,13 +19,6 @@ export default function Landing()
 
   return (
     <div className="landing-page-container">
-      <div className="landing-page-background-container">
-        <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/1ef84595-1fdb-4404-adac-15215ceeb3ae/9b7e4892-200e-4740-909b-cdd33763fe9f/US-en-20220711-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
-          alt="landing-page-background-image"
-          className="landing-page-background-image" />
-        <div className="landing-page-background-gradient-container" />
-      </div>
       <header className="landing-page-header-container">
         <Link to="" className="logo-signup-link">
           <svg viewBox="0 0 111 30" className="svg-icon svg-icon-netflix-logo" aria-hidden="true" focusable="false">
@@ -35,75 +28,159 @@ export default function Landing()
       </header>
       <div className="landing-page-cards-container">
         <div
-          className="landing-page-card-container landing-page-hero-card-container">
-          <div className="landing-page-hero-card-content">
-            <h1 className="landing-page-hero-card-title">
+          className="landing-page-hero-card-container">
+          <div className="landing-page-background-container">
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/vlv3/1ef84595-1fdb-4404-adac-15215ceeb3ae/9b7e4892-200e-4740-909b-cdd33763fe9f/US-en-20220711-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
+              alt="landing-page-background-image"
+              className="landing-page-background-image" />
+            <div className="landing-page-background-gradient-container" />
+          </div>
+          <div className="landing-page-hero-card-content-container">
+            <h1 className="landing-page-hero-card-content-title">
               Unlimited movies, TV shows, and more.
             </h1>
-            <h2 className="landing-page-hero-card-subtitle">
+            <h2 className="landing-page-hero-card-content-subtitle">
               Watch anywhere. Cancel anytime.
             </h2>
-            <form className="landing-page-hero-card-form">
-              <h3 className="landing-page-hero-card-form-title">
+            <form className="landing-page-hero-card-content-form">
+              <h3 className="landing-page-hero-card-content-form-title">
                 Ready to watch? Enter your email to create or restart your membership.
               </h3>
-              <div className="landing-page-hero-card-form-row-container">
+              <div className="landing-page-hero-card-content-form-row-container">
                 <div
-                  className={`landing-page-hero-card-form-email-container
+                  className={`landing-page-hero-card-content-form-email-container
                   ${((!validEmail) && " error")}`}
                   onClick={() => setActiveInput(true)}>
                   <div
-                    className={`landing-page-hero-card-form-email-placement-container
+                    className={`landing-page-hero-card-content-form-email-placement-container
                     ${(activeInput || emailInput) && " shrink"}`}
                   >
-                    <label htmlFor="landing-page-hero-card-form-email-input">
+                    <label htmlFor="landing-page-hero-card-content-form-email-input">
                       Email address
                     </label>
                     <input
                       type="text"
                       name="email"
                       className={(activeInput || emailInput) && "active"}
-                      id="landing-page-hero-card-form-email-input"
+                      id="landing-page-hero-card-content-form-email-input"
                       value={emailInput}
                       onChange={(e) => setEmailInput(e.target.value)}
                       onBlur={() => setActiveInput(false)} />
                   </div>
-                  {/* {!validEmail &&
+                  {!validEmail &&
                     <p className="landing-page-hero-card-form-email-error-message">
                       Please enter a valid email or phone number.
                     </p>
-                  } */}
-
+                  }
                 </div>
-                <button className="landing-page-hero-card-form-button">
-                  Get Started
+                <button className="landing-page-hero-card-content-form-button">
+                  <span>Get Started</span>
                 </button>
               </div>
-
             </form>
           </div>
         </div>
-        <div
-          className="landing-page-card-container landing-page-animation-card-container">
+        <div className="landing-page-card-container">
+          <div className="landing-page-card-content-container">
+            <div className="landing-page-card-content-text-container">
+              <h1>Enjoy on your TV.</h1>
+              <h2>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray, players, and more.</h2>
+            </div>
+            <div className="landing-page-card-content-image-container">
+              <div className="landing-page-card-content-animation-container">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="landing-page-card-content-image" />
+                <div className="landing-page-card-content-animation">
+                  <video
+                    autoPlay
+                    playsInline
+                    muted
+                    loop>
+                    <source
+                      src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
+                      type="video/mp4" />
+                  </video>
+                  <div className="landing-page-card-content-animation-text">
 
+                  </div>
+                  <div className="landing-page-card-content-animation-custom">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          className="landing-page-card-container landing-page-animation-card-container">
+        <div className="landing-page-card-container">
+          <div className="landing-page-card-content-container">
+            <div className="landing-page-card-content-text-container">
+              <h1>Download your shows to watch offline.</h1>
+              <h2>Save your favorites easily and always have something to watch.</h2>
+            </div>
+            <div className="landing-page-card-content-image-container">
+              <div className="landing-page-card-content-animation-container">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="landing-page-card-content-image" />
+                <div className="landing-page-card-content-animation">
+                  <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" alt="" />
+                  <div className="landing-page-card-content-animation-text">
+                    <div>Stranger Things</div>
+                    <div>Downloading...</div>
+                  </div>
+                  <div className="landing-page-card-content-animation-custom">
 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          className="landing-page-card-container landing-page-animation-card-container">
-
+        <div className="landing-page-card-container">
+          <div className="landing-page-card-content-container">
+            <div className="landing-page-card-content-text-container">
+              <h1>Watch everywhere.</h1>
+              <h2>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</h2>
+            </div>
+            <div className="landing-page-card-content-image-container">
+              <div className="landing-page-card-content-animation-container">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" alt="landing-page-card-content-image" />
+                <div className="landing-page-card-content-animation">
+                  <video
+                    autoPlay
+                    playsInline
+                    muted
+                    loop>
+                    <source
+                      src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v"
+                      type="video/mp4" />
+                  </video>
+                  <div className="landing-page-card-content-animation-text">
+                  </div>
+                  <div className="landing-page-card-content-animation-custom">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          className="landing-page-card-container landing-page-animation-card-container">
-
+        <div className="landing-page-card-container">
+          <div className="landing-page-card-content-container">
+            <div className="landing-page-card-content-text-container">
+              <h1>Create profiles for kids.</h1>
+              <h2>Send kids on adventures with their favorite characters in a space made just for them-free with your membership.</h2>
+            </div>
+            <div className="landing-page-card-content-image-container">
+              <div className="landing-page-card-content-animation-container">
+                <img src="https://occ-0-2218-116.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABfpnX3dbgjZ-Je8Ax3xn0kXehZm_5L6-xe6YSTq_ucht9TI5jwDMqusWZKNYT8DfGudD0_wWVVTFLiN2_kaQJumz2iivUWbIbAtF.png?r=11f" alt="landing-page-card-content-image" />
+                <div className="landing-page-card-content-animation">
+                  <div className="landing-page-card-content-animation-text">
+                  </div>
+                  <div className="landing-page-card-content-animation-custom">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          className="landing-page-card-container landing-page-faq-card-container">
-
-        </div>
-
       </div>
     </div>
   );
