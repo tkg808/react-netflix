@@ -557,6 +557,7 @@ div.landing-page-kids-card-content-text-container
   width: 52%;
   /* padding: 0 3rem 0 0; */
   padding: 0 0 0 3rem;
+  text-align: center;
   /* margin: -5% 0; */
   z-index: 3;
   flex: 0 1 auto;

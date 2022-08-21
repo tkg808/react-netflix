@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import NestedInput from '../../components/nestedInput/NestedInput';
 import { validateEmail } from '../../hooks/useValidation';
+import FaqCard from '../../components/faqCard/FaqCard';
 
 export default function Landing()
 {
@@ -192,6 +193,7 @@ export default function Landing()
           </div>
           <div className="center-pixel" />
         </div>
+        < FaqCard />
       </div>
     </div>
   );
