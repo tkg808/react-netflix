@@ -1,7 +1,11 @@
 div.landing-page-container
 {
+  width: 100%;
   color: white;
+  overflow-x: hidden;
 }
+
+/* === Header === */
 
 header.landing-page-header-container
 {
@@ -32,26 +36,27 @@ a.landing-page-logo-signup-link
   width: 8.375rem;
 }
 
+/* === Cards Container === */
+
 div.landing-page-cards-container
 {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* overflow-x: hidden; */
 }
 
 /*  === Gradient Background ===  */
 
 div.landing-page-background-container
 {
-  display: flex;
-  justify-content: center;
   position: absolute;
   top: -100px;
   left: 0;
   right: 0;
   z-index: -1;
+  display: flex;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -75,6 +80,8 @@ div.landing-page-background-gradient-container
   object-fit: scale-down;
 }
 
+/* === Hero Card === */
+
 div.landing-page-hero-card-container
 {
   width: 100%;
@@ -82,6 +89,7 @@ div.landing-page-hero-card-container
   position: relative;
   display: flex;
   justify-content: center;
+  background: transparent;
   border-bottom: 8px solid #222;
 }
 
@@ -204,51 +212,44 @@ button.landing-page-hero-card-content-form-button
   border-radius: 2px;
 }
 
-div.landing-page-card-container
+/* === Watch Card === */
+
+div.landing-page-watch-card-container
 {
   padding: 70px 45px;
   margin-bottom: 0;
   position: relative;
-  background-color: black;
+  background: transparent;
   border-bottom: 8px solid #222;
 }
 
-div.landing-page-card-content-container
+div.landing-page-watch-card-content-container
 {
-  max-width: 1100px;
+  /* max-width: 1100px; */
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-div.landing-page-card-content-container.flipped
-{
-  flex-flow: row-reverse;
-}
-
-div.landing-page-card-content-text-container
+div.landing-page-watch-card-content-text-container
 {
   height: 100%;
   width: 52%;
   padding: 0 3rem 0 0;
   margin: -5% 0;
-  z-index: 3;
+  /* z-index: 3; */
   flex: 0 1 auto;
 }
 
-div.landing-page-card-content-text-container.flipped
-{
-  padding: 0 0 0 3rem;
-}
-
-div.landing-page-card-content-text-container h1
+div.landing-page-watch-card-content-text-container h1
 {
   margin-bottom: 0.5rem;
   font-size: 3.125rem;
   line-height: 1.1;
 }
 
-div.landing-page-card-content-text-container h2
+div.landing-page-watch-card-content-text-container h2
 {
   margin: 0.75em 0 0.25em 0;
   font-size: 1.625rem;
@@ -256,7 +257,7 @@ div.landing-page-card-content-text-container h2
   line-height: 1.1;
 }
 
-div.landing-page-card-content-image-container
+div.landing-page-watch-card-content-image-container
 {
   height: 100%;
   width: 48%;
@@ -264,22 +265,23 @@ div.landing-page-card-content-image-container
   flex: 0 1 auto;
 }
 
-div.landing-page-card-content-animation-container
+div.landing-page-watch-card-content-animation-container
 {
   margin: -10% -5% -5% 0;
   position: relative;
   overflow: hidden;
 }
 
-img.landing-page-card-content-animation-image
+div.landing-page-watch-card-content-animation-container img
 {
   height: auto;
   max-width: 100%;
   position: relative;
   z-index: 2;
+  border: 0;
 }
 
-div.landing-page-card-content-animation
+div.landing-page-watch-card-content-animation
 {
   height: 100%;
   max-height: 54%;
@@ -291,8 +293,311 @@ div.landing-page-card-content-animation
   transform: translate(-50%, -50%);
 }
 
-div.landing-page-card-content-animation video
+div.landing-page-watch-card-content-animation video
 {
   height: 100%;
   width: 100%;
+}
+
+div.center-pixel
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+/* === Download Card === */
+
+div.landing-page-download-card-container
+{
+  padding: 70px 45px;
+  margin-bottom: 0;
+  position: relative;
+  background: transparent;
+  border-bottom: 8px solid #222;
+}
+
+div.landing-page-download-card-content-container
+{
+  /* max-width: 1100px; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row-reverse;
+}
+
+div.landing-page-download-card-content-text-container
+{
+  height: 100%;
+  width: 52%;
+  /* padding: 0 3rem 0 0; */
+  padding: 0 0 0 3rem;
+  margin: -5% 0;
+  /* z-index: 3; */
+  flex: 0 1 auto;
+}
+
+div.landing-page-download-card-content-text-container h1
+{
+  margin-bottom: 0.5rem;
+  font-size: 3.125rem;
+  line-height: 1.1;
+}
+
+div.landing-page-download-card-content-text-container h2
+{
+  margin: 0.75em 0 0.25em 0;
+  font-size: 1.625rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+div.landing-page-download-card-content-image-container
+{
+  height: 100%;
+  width: 48%;
+  display: flex;
+  flex: 0 1 auto;
+}
+
+div.landing-page-download-card-content-animation-container
+{
+  margin: -8% 0 -4% -15%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+div.landing-page-download-card-content-animation-container img
+{
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+  border: 0;
+}
+
+div.landing-page-download-card-content-animation
+{
+  width: 60%;
+  min-width: 15em;
+  margin: 0 auto;
+  padding: 0.5em 0.75em;
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  background: #000;
+  border: 2px solid hsla(0,0%,100%,.25);
+  border-radius: 0.75em;
+  box-shadow: 0 0 2em 0 #000;
+  transform: translateX(-50%);
+}
+
+div.landing-page-download-card-content-animation-image
+{
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0 1em 0 0;
+}
+
+div.landing-page-download-card-content-animation-image img
+{
+  height: 4.5em;
+  max-width: 100%;
+  border: 0;
+}
+
+div.landing-page-download-card-content-animation-text
+{
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 0.3em 0;
+}
+
+div.landing-page-download-card-content-animation-text :first-child
+{
+  font-size: 1em;
+  font-weight: 600;
+}
+
+div.landing-page-download-card-content-animation-text :last-child
+{
+  font-size: 0.9em;
+  color: #0071eb;
+}
+
+div.landing-page-download-card-content-animation-custom
+{
+  height: 3.75em;
+  width: 3em;
+  background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif) 50% no-repeat;
+  background-size: 100%;
+  outline: 2px solid #000;
+  outline-offset: -2px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/* === Stream Card === */
+
+div.landing-page-stream-card-container
+{
+  padding: 70px 45px;
+  margin-bottom: 0;
+  position: relative;
+  background: transparent;
+  border-bottom: 8px solid #222;
+}
+
+div.landing-page-stream-card-content-container
+{
+  /* max-width: 1100px; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.landing-page-stream-card-content-text-container
+{
+  height: 100%;
+  width: 52%;
+  padding: 0 3rem 0 0;
+  margin: -5% 0;
+  /* z-index: 3; */
+  flex: 0 1 auto;
+}
+
+div.landing-page-stream-card-content-text-container h1
+{
+  margin-bottom: 0.5rem;
+  font-size: 3.125rem;
+  line-height: 1.1;
+}
+
+div.landing-page-stream-card-content-text-container h2
+{
+  margin: 0.75em 0 0.25em 0;
+  font-size: 1.625rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+div.landing-page-stream-card-content-image-container
+{
+  height: 100%;
+  width: 48%;
+  display: flex;
+  flex: 0 1 auto;
+}
+
+div.landing-page-stream-card-content-animation-container
+{
+  margin: -10% -5% -5% 0;
+  position: relative;
+  overflow: hidden;
+}
+
+div.landing-page-stream-card-content-animation-container img
+{
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+  border: 0;
+}
+
+div.landing-page-stream-card-content-animation
+{
+  height: 100%;
+  max-height: 47%;
+  width: 100%;
+  max-width: 63%;
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.landing-page-stream-card-content-animation video
+{
+  height: 100%;
+  width: 100%;
+}
+
+/* === Kids Card === */
+
+div.landing-page-kids-card-container
+{
+  padding: 70px 45px;
+  margin-bottom: 0;
+  position: relative;
+  background: transparent;
+  border-bottom: 8px solid #222;
+}
+
+div.landing-page-kids-card-content-container
+{
+  /* max-width: 1100px; */
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row-reverse;
+}
+
+div.landing-page-kids-card-content-text-container
+{
+  height: 100%;
+  width: 52%;
+  /* padding: 0 3rem 0 0; */
+  padding: 0 0 0 3rem;
+  /* margin: -5% 0; */
+  z-index: 3;
+  flex: 0 1 auto;
+}
+
+div.landing-page-kids-card-content-text-container h1
+{
+  margin-bottom: 0.5rem;
+  font-size: 3.125rem;
+  line-height: 1.1;
+}
+
+div.landing-page-kids-card-content-text-container h2
+{
+  margin: 0.75em 0 0.25em 0;
+  font-size: 1.625rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+div.landing-page-kids-card-content-image-container
+{
+  height: 100%;
+  width: 48%;
+  display: flex;
+  flex: 0 1 auto;
+}
+
+div.landing-page-kids-card-content-animation-container
+{
+  /* margin: -8% 0 -4% -15%; */
+  /* width: 100%; */
+  position: relative;
+  overflow: hidden;
+}
+
+div.landing-page-kids-card-content-animation-container img
+{
+  height: auto;
+  max-width: 100%;
+  /* position: relative;
+  z-index: 2;
+  border: 0; */
 }
