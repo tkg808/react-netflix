@@ -5,6 +5,15 @@ import Footer from '../../components/footer/Footer';
 
 export default function Login()
 {
+  const loginFooterLinks =
+    [
+      { text: "FAQ", link: "" },
+      { text: "Help Center", link: "" },
+      { text: "Terms of Use", link: "" },
+      { text: "Privacy", link: "" },
+      { text: "Cookie Preferences", link: "" },
+      { text: "Corporate Information", link: "" }
+    ];
 
   return (
     <div className="login-container">
@@ -24,7 +33,7 @@ export default function Login()
       <div className="login-body">
         <LoginForm />
       </div>
-      <Footer />
+      <Footer footerLinks={loginFooterLinks} />
     </div>
   )
 }

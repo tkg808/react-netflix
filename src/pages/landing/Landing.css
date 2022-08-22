@@ -41,6 +41,7 @@ a.landing-page-logo-signup-link
 div.landing-page-cards-container
 {
   width: 100%;
+  /* margin: 0 auto; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,27 +49,41 @@ div.landing-page-cards-container
 
 /*  === Gradient Background ===  */
 
-div.landing-page-background-container
+div.landing-page-hero-background-container
 {
   position: absolute;
   top: -100px;
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: -1;
-  display: flex;
-  justify-content: center;
   overflow: hidden;
 }
 
-img.landing-page-background-image
+div.landing-page-hero-image-container
 {
+  /* height: 692.594px; */
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+div.landing-page-hero-image-container img
+{
+  /* max-width: 100%; */
+  width: 100%;
   min-width: 1280px;
-  max-width: 100%;
   height: 100%;
+  /* transform: none; */
   object-fit: cover;
 }
 
-div.landing-page-background-gradient-container
+div.landing-page-hero-gradient-container
 {
   width: 100%;
   position: absolute;
@@ -76,7 +91,8 @@ div.landing-page-background-gradient-container
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0, transparent 60%,rgba(0,0,0,.8));
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(0deg,rgba(0,0,0,0.8) 0, transparent 60%,rgba(0,0,0,0.8));
   object-fit: scale-down;
 }
 
@@ -115,101 +131,6 @@ h2.landing-page-hero-card-content-subtitle
   font-size: 26px;
   font-weight: 400;
   text-align: center;
-}
-
-form.landing-page-hero-card-content-form
-{
-  width: 100%;
-  padding-top: 14px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h3.landing-page-hero-card-content-form-title
-{
-  padding: 0 5% 20px 5%;
-  margin: 0 auto;
-  font-size: 19px;
-  font-weight: 400;
-  text-align: center;
-}
-
-div.landing-page-hero-card-content-form-row-container
-{
-  display: flex;
-  justify-content: center;
-}
-
-div.landing-page-hero-card-content-form-email-container
-{
-  height: 60px;
-  width: 450px;
-  margin-bottom: 16px;
-  background-color: white;
-  border-radius: 2px;
-}
-
-div.landing-page-hero-card-content-form-email-container.error
-{
-  border-bottom: 2px solid #ffa00a;
-}
-
-div.landing-page-hero-card-content-form-email-placement-container
-{
-  height: 60px;
-  width: 100%;
-  padding: 20px 10px 0 10px;
-  color: #8C8C8C;
-  font-size: 18px;
-  transition: padding-top 0.3s, font-size 0.3s;
-}
-
-div.landing-page-hero-card-content-form-email-placement-container.shrink
-{
-  padding-top: 5px;
-  font-size: 14px;
-}
-
-div.landing-page-hero-card-content-form-email-placement-container input
-{
-  height: 0;
-  width: 100%;
-  color: black;
-  font-size: 18px;
-  background-color: white;
-  border: none;
-  transition: height 0.3s;
-}
-
-div.landing-page-hero-card-content-form-email-placement-container input.active
-{
-  height: 35px;
-}
-
-div.landing-page-hero-card-content-form-email-placement-container input:focus
-{
-  outline: none;
-}
-
-p.landing-page-hero-card-form-email-error-message
-{
-  padding: 6px 3px;
-  color: #b92d2b;
-  font-size: 14px;
-}
-
-button.landing-page-hero-card-content-form-button
-{
-  width: 35%;
-  height: 60px;
-  padding: 8px 25px;
-  color: white;
-  font-size: 20px;
-  background-color: #e50914;
-  border: none;
-  border-radius: 2px;
 }
 
 /* === Watch Card === */
@@ -601,4 +522,14 @@ div.landing-page-kids-card-content-animation-container img
   /* position: relative;
   z-index: 2;
   border: 0; */
+}
+
+/* === Footer Container === */
+
+div.landing-page-footer-container
+{
+  padding: 70px 45px 0 45px;
+  margin-bottom: 0;
+  position: relative;
+  background: transparent;
 }

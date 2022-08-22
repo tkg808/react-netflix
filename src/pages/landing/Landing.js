@@ -1,22 +1,36 @@
 import './Landing.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import NestedInput from '../../components/nestedInput/NestedInput';
-import { validateEmail } from '../../hooks/useValidation';
+import EmailForm from '../../components/emailForm/EmailForm';
 import FaqCard from '../../components/faqCard/FaqCard';
+import Footer from '../../components/footer/Footer';
 
 export default function Landing()
 {
-  const [emailInput, setEmailInput] = useState("");
-  const [activeInput, setActiveInput] = useState(false);
-  const [validEmail, setValidEmail] = useState(false);
+  const landingFooterLinks =
+    [
+      { text: "FAQ", link: "" },
+      { text: "Help Center", link: "" },
+      { text: "Account", link: "" },
+      { text: "Media Center", link: "" },
+      { text: "Investor Relations", link: "" },
+      { text: "Jobs", link: "" },
+      { text: "Redeem Gift Cards", link: "" },
+      { text: "Buy Gift Cards", link: "" },
+      { text: "Ways to Watch", link: "" },
+      { text: "Terms of Use", link: "" },
+      { text: "Privacy", link: "" },
+      { text: "Cookie Preferences", link: "" },
+      { text: "Corporate Information", link: "" },
+      { text: "Contact Us", link: "" },
+      { text: "Speed Test", link: "" },
+      { text: "Legal Notices", link: "" },
+      { text: "Only on Netflix", link: "" },
+    ];
 
-  useEffect(() =>
-  {
-    validateEmail(emailInput) ?
-      setValidEmail(true) :
-      setValidEmail(false);
-  }, [emailInput]);
+  const [heroEmail, setHeroEmail] = useState("");
+  const [activeHeroInput, setActiveHeroInput] = useState(false);
+  const [validHeroInput, setValidHeroInput] = useState(false);
 
   return (
     <div className="landing-page-container">
@@ -36,12 +50,13 @@ export default function Landing()
       </header>
       <div className="landing-page-cards-container">
         <div className="landing-page-hero-card-container">
-          <div className="landing-page-background-container">
-            <img
-              src="https://assets.nflxext.com/ffe/siteui/vlv3/1ef84595-1fdb-4404-adac-15215ceeb3ae/9b7e4892-200e-4740-909b-cdd33763fe9f/US-en-20220711-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
-              alt="landing-page-background-image"
-              className="landing-page-background-image" />
-            <div className="landing-page-background-gradient-container" />
+          <div className="landing-page-hero-background-container">
+            <div className="landing-page-hero-image-container">
+              <img
+                src="https://assets.nflxext.com/ffe/siteui/vlv3/1ef84595-1fdb-4404-adac-15215ceeb3ae/9b7e4892-200e-4740-909b-cdd33763fe9f/US-en-20220711-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
+                alt="landing-page-background-image" />
+              <div className="landing-page-hero-gradient-container" />
+            </div>
           </div>
           <div className="landing-page-hero-card-content-container">
             <h1 className="landing-page-hero-card-content-title">
@@ -50,42 +65,13 @@ export default function Landing()
             <h2 className="landing-page-hero-card-content-subtitle">
               Watch anywhere. Cancel anytime.
             </h2>
-            <form className="landing-page-hero-card-content-form">
-              <h3 className="landing-page-hero-card-content-form-title">
-                Ready to watch? Enter your email to create or restart your membership.
-              </h3>
-              <div className="landing-page-hero-card-content-form-row-container">
-                <div
-                  className={`landing-page-hero-card-content-form-email-container
-                  ${((!validEmail) && " error")}`}
-                  onClick={() => setActiveInput(true)}>
-                  <div
-                    className={`landing-page-hero-card-content-form-email-placement-container
-                    ${(activeInput || emailInput) && " shrink"}`}
-                  >
-                    <label htmlFor="landing-page-hero-card-content-form-email-input">
-                      Email address
-                    </label>
-                    <input
-                      type="text"
-                      name="email"
-                      className={(activeInput || emailInput) && "active"}
-                      id="landing-page-hero-card-content-form-email-input"
-                      value={emailInput}
-                      onChange={(e) => setEmailInput(e.target.value)}
-                      onBlur={() => setActiveInput(false)} />
-                  </div>
-                  {!validEmail &&
-                    <p className="landing-page-hero-card-form-email-error-message">
-                      Please enter a valid email or phone number.
-                    </p>
-                  }
-                </div>
-                <button className="landing-page-hero-card-content-form-button">
-                  <span>Get Started</span>
-                </button>
-              </div>
-            </form>
+            <EmailForm
+              emailInput={heroEmail}
+              setEmailInput={setHeroEmail}
+              activeInput={activeHeroInput}
+              setActiveInput={setActiveHeroInput}
+              validInput={validHeroInput}
+              setValidInput={setValidHeroInput} />
           </div>
         </div>
         <div className="landing-page-watch-card-container">
@@ -194,6 +180,9 @@ export default function Landing()
           <div className="center-pixel" />
         </div>
         < FaqCard />
+      </div>
+      <div className="landing-page-footer-container">
+        <Footer footerLinks={landingFooterLinks} />
       </div>
     </div>
   );
