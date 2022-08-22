@@ -41,6 +41,7 @@ a.landing-page-logo-signup-link
 div.landing-page-cards-container
 {
   width: 100%;
+  /* margin: 0 auto; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,27 +49,41 @@ div.landing-page-cards-container
 
 /*  === Gradient Background ===  */
 
-div.landing-page-background-container
+div.landing-page-hero-background-container
 {
   position: absolute;
   top: -100px;
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: -1;
-  display: flex;
-  justify-content: center;
   overflow: hidden;
 }
 
-img.landing-page-background-image
+div.landing-page-hero-image-container
 {
+  /* height: 692.594px; */
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+div.landing-page-hero-image-container img
+{
+  /* max-width: 100%; */
+  width: 100%;
   min-width: 1280px;
-  max-width: 100%;
   height: 100%;
+  /* transform: none; */
   object-fit: cover;
 }
 
-div.landing-page-background-gradient-container
+div.landing-page-hero-gradient-container
 {
   width: 100%;
   position: absolute;
@@ -76,7 +91,8 @@ div.landing-page-background-gradient-container
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0, transparent 60%,rgba(0,0,0,.8));
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(0deg,rgba(0,0,0,0.8) 0, transparent 60%,rgba(0,0,0,0.8));
   object-fit: scale-down;
 }
 
