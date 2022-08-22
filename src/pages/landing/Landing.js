@@ -1,11 +1,33 @@
 import './Landing.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import EmailForm from '../../components/emailForm/EmailForm';
 import FaqCard from '../../components/faqCard/FaqCard';
+import Footer from '../../components/footer/Footer';
 
 export default function Landing()
 {
+  const landingFooterLinks =
+    [
+      { text: "FAQ", link: "" },
+      { text: "Help Center", link: "" },
+      { text: "Account", link: "" },
+      { text: "Media Center", link: "" },
+      { text: "Investor Relations", link: "" },
+      { text: "Jobs", link: "" },
+      { text: "Redeem Gift Cards", link: "" },
+      { text: "Buy Gift Cards", link: "" },
+      { text: "Ways to Watch", link: "" },
+      { text: "Terms of Use", link: "" },
+      { text: "Privacy", link: "" },
+      { text: "Cookie Preferences", link: "" },
+      { text: "Corporate Information", link: "" },
+      { text: "Contact Us", link: "" },
+      { text: "Speed Test", link: "" },
+      { text: "Legal Notices", link: "" },
+      { text: "Only on Netflix", link: "" },
+    ];
+
   const [heroEmail, setHeroEmail] = useState("");
   const [activeHeroInput, setActiveHeroInput] = useState(false);
   const [validHeroInput, setValidHeroInput] = useState(false);
@@ -157,6 +179,9 @@ export default function Landing()
           <div className="center-pixel" />
         </div>
         < FaqCard />
+      </div>
+      <div className="landing-page-footer-container">
+        <Footer footerLinks={landingFooterLinks} />
       </div>
     </div>
   );

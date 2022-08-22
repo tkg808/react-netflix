@@ -507,3 +507,13 @@ div.landing-page-kids-card-content-animation-container img
   z-index: 2;
   border: 0; */
 }
+
+/* === Footer Container === */
+
+div.landing-page-footer-container
+{
+  padding: 70px 45px 0 45px;
+  margin-bottom: 0;
+  position: relative;
+  background: transparent;
+}
