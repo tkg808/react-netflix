@@ -2,7 +2,6 @@ import './Landing.css';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import EmailForm from '../../components/emailForm/EmailForm';
-import { validateEmail } from '../../hooks/useValidation';
 import FaqCard from '../../components/faqCard/FaqCard';
 
 export default function Landing()

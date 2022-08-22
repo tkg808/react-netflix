@@ -1,24 +1,14 @@
 import './FaqCard.css';
 import { useState } from 'react';
 import { questionsData } from './faqCardData';
+import EmailForm from '../emailForm/EmailForm';
 
 export default function FaqCard()
 {
   const [currItem, setCurrItem] = useState(-1);
-
-  function handleClick(event, index)
-  {
-    event.preventDefault();
-
-    if (currItem === index)
-    {
-      setCurrItem(-1);
-    }
-    else
-    {
-      setCurrItem(index);
-    }
-  }
+  const [faqEmail, setFaqEmail] = useState("");
+  const [activeFaqInput, setActiveFaqInput] = useState(false);
+  const [validFaqInput, setValidFaqInput] = useState(false);
 
   return (
     <div className="faq-card-container">
@@ -55,6 +45,13 @@ export default function FaqCard()
             })
           }
         </ul>
+        <EmailForm
+          emailInput={faqEmail}
+          setEmailInput={setFaqEmail}
+          activeInput={activeFaqInput}
+          setActiveInput={setActiveFaqInput}
+          validInput={validFaqInput}
+          setValidInput={setValidFaqInput} />
       </div>
     </div >
   );
