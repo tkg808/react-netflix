@@ -1,0 +1,94 @@
+form.email-form-container
+{
+  width: 100%;
+  padding-top: 14px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3.email-form-title
+{
+  padding: 0 5% 20px 5%;
+  margin: 0 auto;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+}
+
+div.email-form-row-container
+{
+  display: flex;
+  justify-content: center;
+}
+
+div.email-form-input-container
+{
+  height: 60px;
+  width: 450px;
+  margin-bottom: 16px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+div.email-form-input-container.error
+{
+  border-bottom: 2px solid #ffa00a;
+}
+
+div.email-form-input-placement-container
+{
+  height: 60px;
+  width: 100%;
+  padding: 20px 10px 0 10px;
+  color: #8C8C8C;
+  font-size: 18px;
+  transition: padding-top 0.3s, font-size 0.3s;
+}
+
+div.email-form-input-placement-container.shrink
+{
+  padding-top: 5px;
+  font-size: 14px;
+}
+
+div.email-form-input-placement-container input
+{
+  height: 0;
+  width: 100%;
+  color: black;
+  font-size: 18px;
+  background-color: white;
+  border: none;
+  transition: height 0.3s;
+}
+
+div.email-form-input-placement-container input.active
+{
+  height: 35px;
+}
+
+div.email-form-input-placement-container input:focus
+{
+  outline: none;
+}
+
+p.email-form-input-error-message
+{
+  padding: 6px 3px;
+  color: #b92d2b;
+  font-size: 14px;
+}
+
+button.email-form-button
+{
+  width: 35%;
+  height: 60px;
+  padding: 8px 25px;
+  color: white;
+  font-size: 20px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 2px;
+}

@@ -1,22 +1,15 @@
 import './Landing.css';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import NestedInput from '../../components/nestedInput/NestedInput';
+import EmailForm from '../../components/emailForm/EmailForm';
 import { validateEmail } from '../../hooks/useValidation';
 import FaqCard from '../../components/faqCard/FaqCard';
 
 export default function Landing()
 {
-  const [emailInput, setEmailInput] = useState("");
-  const [activeInput, setActiveInput] = useState(false);
-  const [validEmail, setValidEmail] = useState(false);
-
-  useEffect(() =>
-  {
-    validateEmail(emailInput) ?
-      setValidEmail(true) :
-      setValidEmail(false);
-  }, [emailInput]);
+  const [heroEmail, setHeroEmail] = useState("");
+  const [activeHeroInput, setActiveHeroInput] = useState(false);
+  const [validHeroInput, setValidHeroInput] = useState(false);
 
   return (
     <div className="landing-page-container">
@@ -50,42 +43,13 @@ export default function Landing()
             <h2 className="landing-page-hero-card-content-subtitle">
               Watch anywhere. Cancel anytime.
             </h2>
-            <form className="landing-page-hero-card-content-form">
-              <h3 className="landing-page-hero-card-content-form-title">
-                Ready to watch? Enter your email to create or restart your membership.
-              </h3>
-              <div className="landing-page-hero-card-content-form-row-container">
-                <div
-                  className={`landing-page-hero-card-content-form-email-container
-                  ${((!validEmail) && " error")}`}
-                  onClick={() => setActiveInput(true)}>
-                  <div
-                    className={`landing-page-hero-card-content-form-email-placement-container
-                    ${(activeInput || emailInput) && " shrink"}`}
-                  >
-                    <label htmlFor="landing-page-hero-card-content-form-email-input">
-                      Email address
-                    </label>
-                    <input
-                      type="text"
-                      name="email"
-                      className={(activeInput || emailInput) && "active"}
-                      id="landing-page-hero-card-content-form-email-input"
-                      value={emailInput}
-                      onChange={(e) => setEmailInput(e.target.value)}
-                      onBlur={() => setActiveInput(false)} />
-                  </div>
-                  {!validEmail &&
-                    <p className="landing-page-hero-card-form-email-error-message">
-                      Please enter a valid email or phone number.
-                    </p>
-                  }
-                </div>
-                <button className="landing-page-hero-card-content-form-button">
-                  <span>Get Started</span>
-                </button>
-              </div>
-            </form>
+            <EmailForm
+              emailInput={heroEmail}
+              setEmailInput={setHeroEmail}
+              activeInput={activeHeroInput}
+              setActiveInput={setActiveHeroInput}
+              validInput={validHeroInput}
+              setValidInput={setValidHeroInput} />
           </div>
         </div>
         <div className="landing-page-watch-card-container">
