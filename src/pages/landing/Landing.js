@@ -1,9 +1,6 @@
 import './Landing.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { renderToStaticMarkup } from 'react-dom/server';
-import { IoGlobeOutline } from 'react-icons/io5';
-import { MdArrowDropDown } from 'react-icons/md';
 import EmailForm from '../../components/emailForm/EmailForm';
 import FaqCard from '../../components/faqCard/FaqCard';
 import Footer from '../../components/footer/Footer';

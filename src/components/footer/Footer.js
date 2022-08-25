@@ -1,6 +1,5 @@
 import './Footer.css';
 import { Link } from 'react-router-dom';
-import { IoGlobeOutline } from 'react-icons/io5';
 
 export default function Footer({ footerLinks })
 {
