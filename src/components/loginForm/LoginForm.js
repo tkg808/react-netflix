@@ -6,7 +6,7 @@ import { validateEmail, validatePhone, validatePassword } from '../../hooks/useV
 
 export default function LoginForm({ })
 {
-  const { setIsLoggedIn } = useContext(UserContext);
+  // const { setIsLoggedIn } = useContext(UserContext);
   const [formData, setFormData] = useState(
     {
       contact: "",
