@@ -1,6 +1,5 @@
 import './Footer.css';
 import { Link } from 'react-router-dom';
-import { IoGlobeOutline } from 'react-icons/io5';
 
 export default function Footer({ footerLinks })
 {
@@ -23,13 +22,17 @@ export default function Footer({ footerLinks })
             })
           }
         </ul>
-        <div className="lang-switcher-container">
-          <div className="lang-switcher-select-container">
-            <IoGlobeOutline className="lang-switcher-globe-icon" size={20} />
-            <select name="lang-switcher" id="lang-switcher-select">
-              <option value="english">English</option>
-              <option value="spanish">Espanol</option>
-            </select>
+        <div className="footer-lang-container">
+          <div className="lang-switcher-container">
+            <label htmlFor="lang-switcher-footer-select">
+              <span>Select Language</span>
+            </label>
+            <div className="lang-switcher-select-container">
+              <select name="lang-switcher-footer" id="lang-switcher-footer-select">
+                <option value="english">English</option>
+                <option value="spanish">Espanol</option>
+              </select>
+            </div>
           </div>
         </div>
       </footer>
