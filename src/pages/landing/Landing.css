@@ -615,3 +615,8 @@ div.landing-page-footer-container
   position: relative;
   background: transparent;
 }
+
+div.landing-page-footer-container footer
+{
+  padding-top: 0;
+}

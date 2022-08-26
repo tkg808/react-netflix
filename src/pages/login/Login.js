@@ -33,7 +33,9 @@ export default function Login()
       <div className="login-body">
         <LoginForm />
       </div>
-      <Footer footerLinks={loginFooterLinks} />
+      <div className="login-page-footer-container">
+        <Footer footerLinks={loginFooterLinks} />
+      </div>
     </div>
   )
 }

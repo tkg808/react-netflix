@@ -59,3 +59,12 @@ div.login-body
   display: flex;
   justify-content: center;
 }
+
+div.login-page-footer-container
+{
+  width: 100%;
+  min-width: 190px;
+  margin-top: 0;
+  padding-bottom: 20px;
+  background: rgba(0,0,0,.75);;
+}
