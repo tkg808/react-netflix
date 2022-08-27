@@ -5,29 +5,28 @@ export default function Footer({ footerLinks })
 {
   return (
     <footer className="footer">
-      <p className="footer-top">
-        Questions? Call
-        <Link to="" className="footer-top-link"> 1-844-505-2993</Link>
+      <p>
+        Questions? Call <Link to="" className="contact-number">1-844-505-2993</Link>
       </p>
-      <ul className="footer-links">
+      <ul className="links-list">
         {
           footerLinks.map((item, index) => 
           {
             return (
-              <li className="footer-links-item" key={index}>
-                <Link to={item.link} className="footer-link">{item.text}</Link>
+              <li className="links-item" key={index}>
+                <Link to={item.link}>{item.text}</Link>
               </li>
             );
           })
         }
       </ul>
-      <div className="footer-lang-container">
+      <div className="lang-container">
         <div className="lang-switcher-container">
           <label htmlFor="lang-switcher-footer-select">
             <span>Select Language</span>
           </label>
           <div className="lang-switcher-select-container">
-            <select name="lang-switcher-footer" id="lang-switcher-footer-select">
+            <select name="lang-switcher-select" id="lang-switcher-footer-select">
               <option value="english">English</option>
               <option value="spanish">Espanol</option>
             </select>
