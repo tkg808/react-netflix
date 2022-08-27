@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../hooks/Contexts';
 import { validateEmail, validatePhone, validatePassword } from '../../hooks/useValidation';
 
-export default function LoginForm({ })
+export default function LoginForm()
 {
   // const { setIsLoggedIn } = useContext(UserContext);
   const [formData, setFormData] = useState(
     {
       contact: "",
       password: "",
-    })
+    });
   const [validContact, setValidContact] = useState(false);
   const [validPassword, setValidPassword] = useState(false);
   const [activeContactInput, setActiveContactInput] = useState(false);
@@ -52,80 +52,67 @@ export default function LoginForm({ })
   }, [formData]);
 
   return (
-    <div className="login-form-container">
-      <form className="login-form-main" onSubmit={handleSubmit}>
-        <h2 className="login-form-title">
-          Sign In
-        </h2>
-        <div
-          className={`login-form-user-contact-container
+    <form className="login-form" onSubmit={handleSubmit}>
+      <h2>
+        Sign In
+      </h2>
+      <div
+        className={`contact-container
           ${((!validContact) && " error")}`}
-          onClick={() => setActiveContactInput(true)}>
-          <div
-            className={`login-form-user-contact-placement-container
-            ${(activeContactInput || formData.contact) && " shrink"}`}
-          >
-            <label htmlFor="login-form-user-contact-input">
-              Email or phone number
-            </label>
-            <input
-              type="text"
-              name="contact"
-              className={(activeContactInput || formData.contact) && "active"}
-              id="login-form-user-contact-input"
-              value={formData.contact}
-              onChange={handleChange}
-              onBlur={() => setActiveContactInput(false)} />
-          </div>
-          {!validContact &&
-            <p className="login-form-user-contact-error-message">
-              Please enter a valid email or phone number.
-            </p>
-          }
-        </div>
+        onClick={() => setActiveContactInput(true)}>
         <div
-          className={`login-form-user-password-container
-          ${((!validPassword) && " error")}`}
-          onClick={() => setActivePasswordInput(true)}>
-          <div
-            className={`login-form-user-password-placement-container
-            ${(activePasswordInput || formData.password) && " shrink"}`}>
-            <label htmlFor="login-form-user-password-input">Password</label>
-            <input
-              type="text"
-              name="password"
-              className={(activePasswordInput || formData.password) && "active"}
-              id="login-form-user-password-input"
-              value={formData.password}
-              onChange={handleChange}
-              onBlur={() => setActivePasswordInput(false)} />
-          </div>
-          {!validPassword &&
-            <p className="login-form-user-password-error-message">
-              Your password must contain between 4 and 60 characters.
-            </p>
-          }
+          className={`placement-container
+            ${(activeContactInput || formData.contact) && " shrink"}`}
+        >
+          <label htmlFor="login-form-contact-input">
+            Email or phone number
+          </label>
+          <input
+            type="text"
+            name="contact"
+            className={(activeContactInput || formData.contact) && "active"}
+            id="login-form-contact-input"
+            value={formData.contact}
+            onChange={handleChange}
+            onBlur={() => setActiveContactInput(false)} />
         </div>
-        <button className="login-form-submit-button">Sign In</button>
-        <div className="login-form-main-bottom-row">
-          <div className="login-form-checkbox-container">
-            <input type="checkbox" id="login-form-user-remember" />
-            <label htmlFor="login-form-user-remember">Remember me</label>
-          </div>
-          <Link to="" className="login-form-help-link">Need help?</Link>
-        </div>
-      </form>
-      <div className="login-form-other">
-        <div className="login-form-signup-container">
-          New to Netflix? <Link to="" className="login-form-signup-link">Sign up now.</Link>
-        </div>
-        <div className="login-form-recaptcha-container">
-          <p className="login-form-recaptcha-text">
-            This page is protected by Google reCAPTCHA to ensure you're not a bot.
-            <Link to="" className="login-form-recaptcha-terms-of-use-link"> Learn more.</Link>
+        {!validContact &&
+          <p className="input-error-message">
+            Please enter a valid email or phone number.
           </p>
-        </div>
+        }
       </div>
-    </div>
+      <div
+        className={`password-container
+          ${((!validPassword) && " error")}`}
+        onClick={() => setActivePasswordInput(true)}>
+        <div
+          className={`placement-container
+            ${(activePasswordInput || formData.password) && " shrink"}`}>
+          <label htmlFor="login-form-password-input">Password</label>
+          <input
+            type="text"
+            name="password"
+            className={(activePasswordInput || formData.password) && "active"}
+            id="login-form-password-input"
+            value={formData.password}
+            onChange={handleChange}
+            onBlur={() => setActivePasswordInput(false)} />
+        </div>
+        {!validPassword &&
+          <p className="input-error-message">
+            Your password must contain between 4 and 60 characters.
+          </p>
+        }
+      </div>
+      <button>Sign In</button>
+      <div className="bottom-row">
+        <div className="checkbox-container">
+          <input type="checkbox" id="login-form-remember-me" />
+          <label htmlFor="login-form-remember-me">Remember me</label>
+        </div>
+        <Link to="">Need help?</Link>
+      </div>
+    </form>
   );
 }

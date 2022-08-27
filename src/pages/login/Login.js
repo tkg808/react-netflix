@@ -32,11 +32,26 @@ export default function Login()
         </header>
       </div>
       <div className="body-container">
-        <LoginForm />
+        <div className="form-container">
+          <LoginForm />
+          <div className="form-other">
+            <div className="signup-container">
+              <p>
+                New to Netflix? <Link to="">Sign up now.</Link>
+              </p>
+            </div>
+            <div className="recaptcha-container">
+              <p>
+                This page is protected by Google reCAPTCHA to ensure you're not a bot.
+                <Link to=""> Learn more.</Link>
+              </p>
+            </div>
+          </div >
+        </div>
       </div>
       <div className="footer-container">
         <Footer footerLinks={loginFooterLinks} />
       </div>
-    </div>
+    </div >
   )
 }

@@ -7,7 +7,7 @@ div.login-page
 
 /* === Background === */
 
-div.login-page > div.background-container
+div.login-page div.background-container
 {
   width: 100%;
   height: 100%;
@@ -17,7 +17,7 @@ div.login-page > div.background-container
   background-size: cover;
 }
 
-div.login-page > div.background-container > img
+div.login-page div.background-container > img
 {
   min-width: 100%;
   min-height: 100%;
@@ -26,7 +26,7 @@ div.login-page > div.background-container > img
 
 /* === Background === */
 
-div.login-page > div.header-container
+div.login-page div.header-container
 {
   width: 100%;
   height: 90px;
@@ -36,7 +36,7 @@ div.login-page > div.header-container
   background-color: transparent;
 }
 
-div.login-page > div.header-container > header
+div.login-page header
 {
   width: 100%;
   margin: 0 3%;
@@ -57,16 +57,71 @@ div.login-page header > a > svg
 
 /* === Body === */
 
-div.login-page > div.body-container
+div.login-page div.body-container
 {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
+/* === Form Container === */
+
+div.login-page div.form-container
+{
+  width: 450px;
+  min-height: 660px;
+  padding: 60px 68px 40px 68px;
+  margin-bottom: 90px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.login-page div.form-other
+{
+  width: 100%;
+  flex-grow: 1;
+}
+
+div.login-page div.signup-container
+{
+  margin-top: 16px;
+}
+
+div.login-page div.signup-container > p
+{
+  font-size: 16px;
+  font-weight: 500;
+  color: #737373;
+}
+
+div.login-page div.signup-container > p > a
+{
+  color: white;
+}
+
+div.login-page div.recaptcha-container
+{
+  margin: 13px 0;
+}
+
+div.login-page div.recaptcha-container > p
+{
+  font-size: 14px;
+  color: #8c8c8c;
+}
+
+div.login-page div.recaptcha-container > p > a
+{
+  color: #0071EB;
+}
+
 /* === Footer === */
 
-div.login-page > div.footer-container
+div.login-page div.footer-container
 {
   width: 100%;
   min-width: 190px;
