@@ -1,33 +1,19 @@
-div.login-form-container
+form.login-form
 {
-  width: 450px;
-  height: 660px;
-  padding: 60px 40px 68px 40px;
-  margin-bottom: 90px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: 16px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-grow: 1;
 }
 
-form.login-form-main
-{
-  width: 315px;
-  height: 380px;
-  display: flex;
-  flex-direction: column;
-}
-
-h2.login-form-title
+form.login-form h2
 {
   font-size: 32px;
   margin-bottom: 28px;
 }
 
-div.login-form-user-contact-container,
-div.login-form-user-password-container
+form.login-form 
+div.contact-container,
+div.password-container
 {
   height: 50px;
   width: 100%;
@@ -36,14 +22,15 @@ div.login-form-user-password-container
   border-radius: 5px;
 }
 
-div.login-form-user-contact-container.error,
-div.login-form-user-password-container.error
+form.login-form 
+div.contact-container.error,
+div.password-container.error
 {
   border-bottom: 2px solid #e87c03;
 }
 
-div.login-form-user-contact-placement-container,
-div.login-form-user-password-placement-container
+form.login-form 
+div.placement-container
 {
   height: 50px;
   width: 100%;
@@ -53,23 +40,22 @@ div.login-form-user-password-placement-container
   transition: padding-top 0.3s, font-size 0.3s;
 }
 
-div.login-form-user-contact-placement-container.shrink,
-div.login-form-user-password-placement-container.shrink
+form.login-form 
+div.placement-container.shrink
 {
   padding-top: 5px;
   font-size: 12px;
 }
 
-p.login-form-user-contact-error-message,
-p.login-form-user-password-error-message
+form.login-form 
+p.input-error-message
 {
   padding: 2px 4px;
   color: #e87c03;
   font-size: 8px;
 }
 
-div.login-form-user-contact-placement-container input,
-div.login-form-user-password-placement-container input
+form.login-form input
 {
   height: 0;
   width: 100%;
@@ -80,19 +66,17 @@ div.login-form-user-password-placement-container input
   transition: height 0.3s;
 }
 
-div.login-form-user-contact-placement-container input.active,
-div.login-form-user-password-placement-container input.active
+form.login-form input.active
 {
   height: 28px;
 }
 
-div.login-form-user-contact-placement-container input:focus,
-div.login-form-user-password-placement-container input:focus
+form.login-form input:focus
 {
   outline: none;
 }
 
-button.login-form-submit-button
+form.login-form button
 {
   height: 50px;
   margin: 24px 0 12px 0;
@@ -103,7 +87,9 @@ button.login-form-submit-button
   border-radius: 5px;
 }
 
-div.login-form-main-bottom-row
+/* === Bottom Row === */
+
+form.login-form div.bottom-row
 {
   width: 100%;
   display: flex;
@@ -111,7 +97,9 @@ div.login-form-main-bottom-row
   color: #b3b3b3;
 }
 
-div.login-form-checkbox-container
+/* === Checkbox === */
+
+form.login-form div.checkbox-container
 {
   width: 200px;
   height: 23px;
@@ -119,56 +107,59 @@ div.login-form-checkbox-container
   align-items: center;
 }
 
-#login-form-user-remember
+#login-form-remember-me
 {
   width: 16px;
   height: 16px;
   margin: 5px 5px 5px 0;
 }
 
-div.login-form-checkbox-container label
+form.login-form 
+input[type="checkbox"]
 {
-  width: 100%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  height: 16px;
+  width: 16px;
+  border-radius: 2px;
+  color: white;
+  background: #737373;
 }
 
-a.login-form-help-link
+form.login-form 
+input[type="checkbox"]:focus
+{
+  color: white;
+  background: white;
+}
+
+form.login-form 
+input[type="checkbox"]:after
+{
+  content: ' ';
+  position: relative;
+  width: 25%;
+  height: 55%;
+  top: 10%;
+  left: 30%;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: none;
+}
+
+form.login-form 
+input[type="checkbox"]:checked:after
+{
+  display: block;
+}
+
+form.login-form 
+div.bottom-row a
 {
   margin-top: 2.5px;
   color: #b3b3b3;
-}
-
-div.login-form-other
-{
-  width: 315px;
-  height: 180px;
-}
-
-div.login-form-signup-container
-{
-  font-size: 16px;
-  color: #737373;
-  margin-top: 16px;
-}
-
-a.login-form-signup-link
-{
-  color: white;
-}
-
-div.login-form-recaptcha-container
-{
-  width: 100%;
-  margin: 13px 0;
-}
-
-p.login-form-recaptcha-text
-{
-  width: 285px;
-  font-size: 13px;
-  color: #8c8c8c;
-}
-
-a.login-form-recaptcha-terms-of-use-link
-{
-  color: #0071EB;
 }
