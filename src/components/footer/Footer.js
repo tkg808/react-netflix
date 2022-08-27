@@ -25,7 +25,7 @@ export default function Footer({ footerLinks })
           <label htmlFor="lang-switcher-footer-select">
             <span>Select Language</span>
           </label>
-          <div className="lang-switcher-select-container">
+          <div className="select-container">
             <select name="lang-switcher-select" id="lang-switcher-footer-select">
               <option value="english">English</option>
               <option value="spanish">Espanol</option>
