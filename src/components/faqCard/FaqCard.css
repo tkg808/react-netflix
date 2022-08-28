@@ -1,4 +1,4 @@
-div.faq-card-container
+div.faq-card
 {
   padding: 70px 45px;
   margin-bottom: 0;
@@ -7,13 +7,13 @@ div.faq-card-container
   border-bottom: 8px solid #222;
 }
 
-div.faq-card-content
+div.faq-card div.content-container
 {
   font-size: 1.625rem;
   font-weight: 400;
 }
 
-div.faq-card-content h1
+div.faq-card h1
 {
   text-align: center;
   font-size: 3.125rem;
@@ -21,20 +21,21 @@ div.faq-card-content h1
   margin-bottom: 0.5rem;
 }
 
-ul.faq-card-list
+div.faq-card ul
 {
   width: 75%;
   /* max-width: 815px; */
   margin: 2em auto;
 }
 
-li.faq-card-list-item
+div.faq-card li
 {
   list-style: none;
   margin: 0 0 8px;
 }
 
-button.faq-question
+div.faq-card li 
+button
 {
   width: 100%;
   padding: 0.8em 2.2em 0.8em 1.2em;
@@ -48,12 +49,14 @@ button.faq-question
   font-weight: 400;
 }
 
-button.faq-question:hover
+div.faq-card li 
+button:hover
 {
   cursor: pointer;
 }
 
-svg.svg-question-icon
+div.faq-card li 
+svg.question-icon
 {
   width: 1em;
   height: 1em;
@@ -64,12 +67,14 @@ svg.svg-question-icon
   transform: translateY(-50%) rotate(-45deg);
 }
 
-svg.svg-question-icon.open
+div.faq-card li 
+svg.question-icon.open
 {
   transform: translateY(-50%);
 }
 
-div.faq-answer
+div.faq-card li 
+div.answer
 {
   max-height: 0;
   display: block;
@@ -79,12 +84,14 @@ div.faq-answer
   overflow: hidden;
 }
 
-div.faq-answer.open
+div.faq-card li 
+div.answer.open
 {
   max-height: 1200px;
 }
 
-div.faq-answer span
+div.faq-card li 
+div.answer span
 {
   display: inline-block;
   padding: 1.2em;
