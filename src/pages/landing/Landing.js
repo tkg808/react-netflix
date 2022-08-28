@@ -80,6 +80,7 @@ export default function Landing()
               Watch anywhere. Cancel anytime.
             </h2>
             <EmailForm
+              nameId="landing-hero-email"
               emailInput={heroEmail}
               setEmailInput={setHeroEmail}
               activeInput={activeHeroInput}

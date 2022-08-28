@@ -46,6 +46,7 @@ export default function FaqCard()
           }
         </ul>
         <EmailForm
+          nameId="faq-email"
           emailInput={faqEmail}
           setEmailInput={setFaqEmail}
           activeInput={activeFaqInput}

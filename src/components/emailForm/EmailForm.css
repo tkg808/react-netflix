@@ -1,4 +1,4 @@
-form.email-form-container
+div.email-form-container
 {
   width: 100%;
   padding-top: 14px;
@@ -8,7 +8,8 @@ form.email-form-container
   align-items: center;
 }
 
-h3.email-form-title
+div.email-form-container 
+h3.title
 {
   padding: 0 5% 20px 5%;
   margin: 0 auto;
@@ -17,13 +18,15 @@ h3.email-form-title
   text-align: center;
 }
 
-div.email-form-row-container
+div.email-form-container 
+form.email-form
 {
   display: flex;
   justify-content: center;
 }
 
-div.email-form-input-container
+div.email-form-container 
+div.input-container
 {
   height: 60px;
   width: 450px;
@@ -32,12 +35,14 @@ div.email-form-input-container
   border-radius: 2px;
 }
 
-div.email-form-input-container.error
+div.email-form-container 
+div.input-container.error
 {
   border-bottom: 2px solid #ffa00a;
 }
 
-div.email-form-input-placement-container
+div.email-form-container 
+div.placement-container
 {
   height: 60px;
   width: 100%;
@@ -47,13 +52,15 @@ div.email-form-input-placement-container
   transition: padding-top 0.3s, font-size 0.3s;
 }
 
-div.email-form-input-placement-container.shrink
+div.email-form-container 
+div.placement-container.shrink
 {
   padding-top: 5px;
   font-size: 14px;
 }
 
-div.email-form-input-placement-container input
+div.email-form-container 
+input
 {
   height: 0;
   width: 100%;
@@ -64,24 +71,28 @@ div.email-form-input-placement-container input
   transition: height 0.3s;
 }
 
-div.email-form-input-placement-container input.active
+div.email-form-container 
+input.active
 {
   height: 35px;
 }
 
-div.email-form-input-placement-container input:focus
+div.email-form-container 
+input:focus
 {
   outline: none;
 }
 
-p.email-form-input-error-message
+div.email-form-container 
+p.error-text
 {
   padding: 6px 3px;
   color: #b92d2b;
   font-size: 14px;
 }
 
-button.email-form-button
+div.email-form-container 
+button
 {
   width: 35%;
   height: 60px;
