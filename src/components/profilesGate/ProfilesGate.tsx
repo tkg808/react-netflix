@@ -26,11 +26,16 @@ export default function ProfilesGate()
       },
       {
         name: "Profile 3",
+        avatar: "https://occ-0-851-3419.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABfNXUMVXGhnCZwPI1SghnGpmUgqS_J-owMff-jig42xPF7vozQS1ge5xTgPTzH7ttfNYQXnsYs4vrMBaadh4E6RTJMVepojWqOXx.png?r=1d4",
+        pin: null
+      },
+      {
+        name: "Profile 4",
         avatar: "https://occ-0-851-3419.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABTEYr5GclkFvWr7UwFeZpOL1oyV7oD98NciCdYxbhh88KEKn5uB_EcZ6Q_dIG9zNfu-4RvoOWfrLxyPODLCeMAdgsKe1W5JLoXos.png?r=a4b",
         pin: null
       },
       {
-        name: "Kids",
+        name: "Profile 5",
         avatar: "https://occ-0-851-3419.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABWY4hABBS1RnrPZcSnDVjgcX9j68wPjtJmwf2qPraFrNkfLlYCUIhwaveEEgrEKR3ACMky2WrYT6S8EOwCXiXj0QiErM-etAfQa3.png?r=11f",
         pin: null
       }
@@ -47,31 +52,28 @@ export default function ProfilesGate()
           </header>
         </div>
       </div>
-      <div className="profiles-container">
-        <h1 className="title">Who's watching?</h1>
-        <ul>
-          {
-            profilesList.map((item, index) => 
+      <div className="centered-container">
+        <div className="profiles-container">
+          <h1 className="title">Who's watching?</h1>
+          <ul className="profiles-list">
             {
-              return (
-                <li key={index}>
-                  <div className="profile-container">
-                    <div className="image-container">
-                      <img src={item.avatar} alt="" />
-                    </div>
-                    <p>{item.name}</p>
-                  </div>
-                  {item.pin && <LockIcon />}
-                </li>
-              )
-            })
-          }
-        </ul>
-        <div className="link-container">
-          <Link to="">Manage Profiles</Link>
+              profilesList.map((item, index) => 
+              {
+                return (
+                  <li key={index}>
+                    <img className="avatar" src={item.avatar} alt="" />
+                    <span className="name">{item.name}</span>
+                    {item.pin && <LockIcon />}
+                  </li>
+                )
+              })
+            }
+          </ul>
+          <span className="link-container">
+            <Link to="" className="manage-profiles-link">Manage Profiles</Link>
+          </span>
         </div>
       </div>
-
     </div>
   );
 }

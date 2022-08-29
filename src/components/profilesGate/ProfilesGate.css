@@ -46,6 +46,21 @@ div.profiles-gate header a > svg
   fill: #e50914;
 }
 
+/* === Centered Container === */
+
+div.profiles-gate div.centered-container
+{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* === Profiles Container === */
 
 div.profiles-gate div.profiles-container
@@ -59,63 +74,98 @@ div.profiles-gate h1.title
   margin: 0.67em 0;
   color: #fff;
   font-size: 3.5vw;
+  font-weight: unset;
 }
 
-div.profiles-gate ul
+div.profiles-gate ul.profiles-list
 {
   margin: 2em 0;
   display: flex;
   justify-content: center;
-  gap: 1.25rem;
+  flex-wrap: wrap;
 }
 
-div.profiles-gate li
+/* === List Items === */
+
+div.profiles-gate ul.profiles-list 
+li
 {
-  /* width: 10%; */
+  width: 10vw;
   min-width: 84px;
   max-width: 200px;
-  
   list-style: none;
 }
 
-div.profiles-gate li 
-div.image-container
+div.profiles-gate ul.profiles-list 
+li:not(:last-child)
 {
-  width: auto
+  margin-right: 2vw;
 }
 
-div.profiles-gate li
-img
+div.profiles-gate ul.profiles-list li 
+img.avatar
 {
   width: 10vw;
-  /* max-width: 200px;
+  max-width: 200px;
   min-width: 84px;
+  height: 10vw;
   max-height: 200px;
-  min-height: 84px; */
+  min-height: 84px;
   border-radius: 4px;
+  display: block;
 }
 
-div.profiles-gate li p
+div.profiles-gate ul.profiles-list li 
+span.name
 {
   width: 100%;
+  min-height: 1.8em;
   margin: 0.6em 0;
+  display: block;
   color: #808080;
+  font-size: 1.3vw;
+  line-height: 1.2em;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-div.profiles-gate li svg
+div.profiles-gate ul.profiles-list li 
+svg
 {
   color: #666;
 }
 
 /* === Link Container === */
 
-div.profiles-gate div.link-container
-a
+div.profiles-gate span.link-container
+{
+  display: inline-block;
+}
+
+div.profiles-gate div.profiles-container 
+a.manage-profiles-link
 {
   padding: 0.5em 1.5em;
   margin: 2em 0 1em;
+  display: inline-block;
   color: #808080;
-  font-size: 1.2vw;
+  font-size: 13px;
   border: 1px solid #808080;
+}
+
+/* === Screen Width < 800px === */
+
+@media screen and (max-width: 800px)
+{
+  div.profiles-gate h1.title
+  {
+    font-size: 30px;
+  }
+
+  div.profiles-gate ul.profiles-list li 
+  span.name
+  {
+    font-size: 12px;
+  }
 }
