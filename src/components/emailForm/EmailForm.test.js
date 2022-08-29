@@ -37,7 +37,7 @@ describe("EmailForm renders", () =>
       </Router>)
 
     const title = await screen.findByText("Ready to watch?", { exact: false });
-    expect(title).toHaveClass("email-form-title");
+    expect(title).toBeVisible();
   })
 
   test("error renders when input is not valid", async () =>
@@ -55,7 +55,7 @@ describe("EmailForm renders", () =>
       </Router>)
 
     const error = await screen.findByText("Please enter a valid email", { exact: false });
-    expect(error).toHaveClass("email-form-input-error-message");
+    expect(error).toBeVisible();
   })
 
   test("error does not render when input is valid", async () =>
@@ -73,7 +73,6 @@ describe("EmailForm renders", () =>
       </Router>)
 
     const error = screen.queryByText("Please enter a valid email", { exact: false });
-
     expect(error).toBeNull();
   })
 

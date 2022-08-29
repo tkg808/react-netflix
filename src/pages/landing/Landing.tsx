@@ -28,9 +28,9 @@ export default function Landing()
       { text: "Only on Netflix", link: "" },
     ];
 
-  const [heroEmail, setHeroEmail] = useState("");
-  const [activeHeroInput, setActiveHeroInput] = useState(false);
-  const [validHeroInput, setValidHeroInput] = useState(false);
+  const [heroEmail, setHeroEmail] = useState<string>("");
+  const [activeHeroInput, setActiveHeroInput] = useState<boolean>(false);
+  const [validHeroInput, setValidHeroInput] = useState<boolean>(false);
 
   return (
     <div className="landing-page">
@@ -80,6 +80,7 @@ export default function Landing()
               Watch anywhere. Cancel anytime.
             </h2>
             <EmailForm
+              nameId="landing-hero-email"
               emailInput={heroEmail}
               setEmailInput={setHeroEmail}
               activeInput={activeHeroInput}

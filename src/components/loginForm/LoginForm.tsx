@@ -1,23 +1,29 @@
 import './LoginForm.css';
-import React, { useState, useEffect, useContext } from 'react';
+import { ChangeEvent, FormEvent, useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../hooks/Contexts';
 import { validateEmail, validatePhone, validatePassword } from '../../hooks/useValidation';
 
+interface TextNode
+{
+  contact: string;
+  password: string;
+}
+
 export default function LoginForm()
 {
   // const { setIsLoggedIn } = useContext(UserContext);
-  const [formData, setFormData] = useState(
+  const [formData, setFormData] = useState<TextNode>(
     {
       contact: "",
       password: "",
     });
-  const [validContact, setValidContact] = useState(false);
-  const [validPassword, setValidPassword] = useState(false);
-  const [activeContactInput, setActiveContactInput] = useState(false);
-  const [activePasswordInput, setActivePasswordInput] = useState(false);
+  const [validContact, setValidContact] = useState<boolean>(false);
+  const [validPassword, setValidPassword] = useState<boolean>(false);
+  const [activeContactInput, setActiveContactInput] = useState<boolean>(false);
+  const [activePasswordInput, setActivePasswordInput] = useState<boolean>(false);
 
-  function handleChange(event)
+  function handleChange(event: ChangeEvent<HTMLInputElement>)
   {
     setFormData((prevState) =>
     {
@@ -25,7 +31,7 @@ export default function LoginForm()
     });
   }
 
-  function handleSubmit(event)
+  function handleSubmit(event: FormEvent)
   {
     event.preventDefault();
 

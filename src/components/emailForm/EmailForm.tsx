@@ -1,8 +1,28 @@
 import './EmailForm.css';
-import { useEffect } from 'react';
+import { Dispatch, SetStateAction, useEffect } from 'react';
 import { validateEmail } from '../../hooks/useValidation';
 
-export default function EmailForm({ emailInput, setEmailInput, activeInput, setActiveInput, validInput, setValidInput })
+interface Props
+{
+  nameId: string;
+  emailInput: string;
+  setEmailInput: Dispatch<SetStateAction<string>>;
+  activeInput: boolean;
+  setActiveInput: Dispatch<SetStateAction<boolean>>;
+  validInput: boolean;
+  setValidInput: Dispatch<SetStateAction<boolean>>;
+}
+
+export default function EmailForm(
+  {
+    nameId,
+    emailInput,
+    setEmailInput,
+    activeInput,
+    setActiveInput,
+    validInput,
+    setValidInput
+  }: Props)
 {
   useEffect(() =>
   {
@@ -10,41 +30,42 @@ export default function EmailForm({ emailInput, setEmailInput, activeInput, setA
   }, [emailInput]);
 
   return (
-    <form className="email-form-container">
-      <h3 className="email-form-title">
+    <div className="email-form-container">
+      <h3 className="title">
         Ready to watch? Enter your email to create or restart your membership.
       </h3>
-      <div className="email-form-row-container">
+      <form className="email-form">
         <div
-          className={`email-form-input-container
+          className={`input-container
                   ${((!validInput) && " error")}`}
           onClick={() => setActiveInput(true)}>
           <div
-            className={`email-form-input-placement-container
+            className={`placement-container
                     ${(activeInput || emailInput) && " shrink"}`}
           >
-            <label htmlFor="email-form-input">
+            <label htmlFor={nameId}>
               Email address
             </label>
             <input
               type="text"
               name="email"
               className={(activeInput || emailInput) && "active"}
-              id="email-form-input"
+              id={nameId}
               value={emailInput}
               onChange={(e) => setEmailInput(e.target.value)}
               onBlur={() => setActiveInput(false)} />
           </div>
-          {!validInput &&
-            <p className="email-form-input-error-message">
+          {
+            !validInput &&
+            <p className="error-text">
               Please enter a valid email or phone number.
             </p>
           }
         </div>
-        <button className="email-form-button">
+        <button>
           <span>Get Started</span>
         </button>
-      </div>
-    </form>
+      </form >
+    </div>
   );
 }
