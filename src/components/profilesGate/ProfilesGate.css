@@ -1,0 +1,121 @@
+div.profiles-gate
+{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #141414;
+  text-align: center;
+}
+
+/* === Header === */
+
+div.profiles-gate div.pinned-header-container
+{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  color: white;
+}
+
+div.profiles-gate header
+{
+  width: 100%;
+  height: 68px;
+  padding: 0 4%;
+  background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.7) 10%,transparent);
+}
+
+div.profiles-gate header a
+{
+  height: 68px;
+  display: flex;
+  align-items: center;
+}
+
+div.profiles-gate header a > svg
+{
+  max-width: 92.5px;
+  max-height: 31px;
+  fill: #e50914;
+}
+
+/* === Profiles Container === */
+
+div.profiles-gate div.profiles-container
+{
+  max-width: 80%;
+}
+
+div.profiles-gate h1.title
+{
+  width: 100%;
+  margin: 0.67em 0;
+  color: #fff;
+  font-size: 3.5vw;
+}
+
+div.profiles-gate ul
+{
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+div.profiles-gate li
+{
+  /* width: 10%; */
+  min-width: 84px;
+  max-width: 200px;
+  
+  list-style: none;
+}
+
+div.profiles-gate li 
+div.image-container
+{
+  width: auto
+}
+
+div.profiles-gate li
+img
+{
+  width: 10vw;
+  /* max-width: 200px;
+  min-width: 84px;
+  max-height: 200px;
+  min-height: 84px; */
+  border-radius: 4px;
+}
+
+div.profiles-gate li p
+{
+  width: 100%;
+  margin: 0.6em 0;
+  color: #808080;
+  text-align: center;
+}
+
+div.profiles-gate li svg
+{
+  color: #666;
+}
+
+/* === Link Container === */
+
+div.profiles-gate div.link-container
+a
+{
+  padding: 0.5em 1.5em;
+  margin: 2em 0 1em;
+  color: #808080;
+  font-size: 1.2vw;
+  border: 1px solid #808080;
+}
