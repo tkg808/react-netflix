@@ -1,7 +1,18 @@
 import './Footer.css';
 import { Link } from 'react-router-dom';
 
-export default function Footer({ footerLinks })
+interface LinkProp
+{
+  text: string;
+  link: string;
+}
+
+interface Props
+{
+  footerLinks: LinkProp[];
+}
+
+export default function Footer({ footerLinks }: Props)
 {
   return (
     <footer className="footer">

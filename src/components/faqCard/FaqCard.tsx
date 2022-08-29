@@ -5,10 +5,10 @@ import EmailForm from '../emailForm/EmailForm';
 
 export default function FaqCard()
 {
-  const [currItem, setCurrItem] = useState(-1);
-  const [faqEmail, setFaqEmail] = useState("");
-  const [activeFaqInput, setActiveFaqInput] = useState(false);
-  const [validFaqInput, setValidFaqInput] = useState(false);
+  const [currItem, setCurrItem] = useState<number>(-1);
+  const [faqEmail, setFaqEmail] = useState<string>("");
+  const [activeFaqInput, setActiveFaqInput] = useState<boolean>(false);
+  const [validFaqInput, setValidFaqInput] = useState<boolean>(false);
 
   return (
     <div className="faq-card">

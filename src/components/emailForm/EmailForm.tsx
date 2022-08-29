@@ -1,8 +1,28 @@
 import './EmailForm.css';
-import { useEffect } from 'react';
+import { Dispatch, SetStateAction, useEffect } from 'react';
 import { validateEmail } from '../../hooks/useValidation';
 
-export default function EmailForm({ nameId, emailInput, setEmailInput, activeInput, setActiveInput, validInput, setValidInput })
+interface Props
+{
+  nameId: string;
+  emailInput: string;
+  setEmailInput: Dispatch<SetStateAction<string>>;
+  activeInput: boolean;
+  setActiveInput: Dispatch<SetStateAction<boolean>>;
+  validInput: boolean;
+  setValidInput: Dispatch<SetStateAction<boolean>>;
+}
+
+export default function EmailForm(
+  {
+    nameId,
+    emailInput,
+    setEmailInput,
+    activeInput,
+    setActiveInput,
+    validInput,
+    setValidInput
+  }: Props)
 {
   useEffect(() =>
   {
@@ -35,7 +55,8 @@ export default function EmailForm({ nameId, emailInput, setEmailInput, activeInp
               onChange={(e) => setEmailInput(e.target.value)}
               onBlur={() => setActiveInput(false)} />
           </div>
-          {!validInput &&
+          {
+            !validInput &&
             <p className="error-text">
               Please enter a valid email or phone number.
             </p>

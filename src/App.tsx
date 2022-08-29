@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { UserContext } from './hooks/Contexts';
 import Landing from './pages/landing/Landing';
