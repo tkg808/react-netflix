@@ -23,22 +23,21 @@ export default function Browse()
           <Link to="" className="logo-link">
             <LogoIcon />
           </Link>
-          <nav className="tabbed-nav">
-            <ul className="tabs-list">
+          <ul className="nav-list">
+            <li className="nav-menu"></li>
+            {
+              currProfile && tabsDataList.map((item, index) =>
               {
-                currProfile && tabsDataList.map((item, index) =>
-                {
-                  return (
-                    <li key={index}>
-                      <Link to={item.linkPath} tabIndex={index}>
-                        {item.title}
-                      </Link>
-                    </li>
-                  );
-                })
-              }
-            </ul>
-          </nav>
+                return (
+                  <li key={index} className="nav-tab">
+                    <Link to={item.linkPath} tabIndex={index}>
+                      {item.title}
+                    </Link>
+                  </li>
+                );
+              })
+            }
+          </ul>
         </header>
       </div>
       {!currProfile && <ProfilesGate setCurrProfile={setCurrProfile} />}
