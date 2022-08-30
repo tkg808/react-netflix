@@ -26,7 +26,7 @@ export default function Browse()
           <nav className="tabbed-nav">
             <ul className="tabs-list">
               {
-                tabsDataList.map((item, index) =>
+                currProfile && tabsDataList.map((item, index) =>
                 {
                   return (
                     <li key={index}>
