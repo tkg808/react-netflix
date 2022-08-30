@@ -102,6 +102,12 @@ li:not(:last-child)
   margin-right: 2vw;
 }
 
+div.profiles-gate ul.profiles-list 
+li:hover
+{
+  cursor: pointer;
+}
+
 div.profiles-gate ul.profiles-list li 
 img.avatar
 {
@@ -113,6 +119,12 @@ img.avatar
   min-height: 84px;
   border-radius: 4px;
   display: block;
+}
+
+div.profiles-gate ul.profiles-list 
+li:hover img.avatar
+{
+  border: 2px solid #fff;
 }
 
 div.profiles-gate ul.profiles-list li 
@@ -128,6 +140,12 @@ span.name
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+div.profiles-gate ul.profiles-list 
+li:hover span.name
+{
+  color: white;
 }
 
 div.profiles-gate ul.profiles-list li 
@@ -152,6 +170,13 @@ a.manage-profiles-link
   color: #808080;
   font-size: 13px;
   border: 1px solid #808080;
+}
+
+div.profiles-gate div.profiles-container 
+a.manage-profiles-link:hover
+{
+  color: #fff;
+  border-color: #fff;
 }
 
 /* === Screen Width < 800px === */
