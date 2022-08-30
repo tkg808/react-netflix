@@ -15,7 +15,7 @@ div.profiles-gate
 
 /* === Header === */
 
-div.profiles-gate div.pinned-header-container
+/* div.profiles-gate div.pinned-header-container
 {
   width: 100%;
   position: absolute;
@@ -44,7 +44,7 @@ div.profiles-gate header a > svg
   max-width: 92.5px;
   max-height: 31px;
   fill: #e50914;
-}
+} */
 
 /* === Centered Container === */
 
