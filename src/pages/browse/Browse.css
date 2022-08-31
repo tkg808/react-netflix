@@ -24,6 +24,7 @@ div.browse-page header
   width: 100%;
   height: 68px;
   padding: 0 4%;
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -43,29 +44,29 @@ a.logo-link > svg
   fill: #e50914;
 }
 
-/* === Nav === */
+/* === Primary Nav === */
 
 div.browse-page 
-ul.nav-list
+ul.primary-nav
 {
   display: flex;
   align-items: center;
 }
 
-div.browse-page ul.nav-list 
+div.browse-page ul.primary-nav 
 li
 {
   margin-left: 18px;
   list-style: none;
 }
 
-div.browse-page ul.nav-list
+div.browse-page ul.primary-nav 
 li.nav-menu
 {
   display: none;
 }
 
-div.browse-page ul.nav-list 
+div.browse-page ul.primary-nav 
 li > a
 {
   height: 100%;
@@ -74,4 +75,75 @@ li > a
   font-size: 0.75rem;
   color: #e5e5e5;
   transition: color 0.4s;
+}
+
+/* === Secondary Nav === */
+
+div.browse-page
+div.secondary-nav
+{
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 4%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+div.browse-page div.secondary-nav 
+div.nav-element:not(:last-child)
+{
+  margin-right: 10px;
+}
+
+/* === Account Menu Item === */
+
+div.browse-page 
+div.account-menu-item
+{
+  position: relative;
+}
+
+div.browse-page 
+div.account-dropdown-button
+{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+div.browse-page div.account-dropdown-button 
+a
+{
+  position: relative;
+  display: block;
+  /* z-index: -1; */
+}
+
+div.browse-page div.account-dropdown-button 
+span.profile-link
+{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+div.browse-page div.account-dropdown-button 
+span.profile-link > img
+{
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+div.browse-page div.account-dropdown-button 
+span.caret
+{
+  margin-left: 10px;
+  border-color: #fff transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
 }
