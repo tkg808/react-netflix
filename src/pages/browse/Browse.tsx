@@ -40,35 +40,37 @@ export default function Browse()
               })
             }
           </ul>
-          <div className="secondary-nav">
-            <div className="nav-element">
-              <div className="search-box">
-                <button className="search-tab">
-                  <SearchIcon />
-                </button>
+          {
+            currProfile && <div className="secondary-nav">
+              <div className="nav-element">
+                <div className="search-box">
+                  <button className="search-tab">
+                    <SearchIcon />
+                  </button>
+                </div>
               </div>
-            </div>
-            <div className="nav-element">
-              <span className="notifications">
-                <button className="notifications-menu">
-                  <BellIcon />
-                  <span className="notification-pill">5</span>
-                </button>
-              </span>
-            </div>
-            <div className="nav-element">
-              <div className="account-menu-item">
-                <div className="account-dropdown-button">
-                  <Link to="">
-                    <span className="profile-link">
-                      <img src={"" + (currProfile && currProfile.avatar)} />
-                    </span>
-                  </Link>
-                  <span className="caret" />
+              <div className="nav-element">
+                <span className="notifications">
+                  <button className="notifications-menu">
+                    <BellIcon />
+                    <span className="notification-pill">5</span>
+                  </button>
+                </span>
+              </div>
+              <div className="nav-element">
+                <div className="account-menu-item">
+                  <div className="account-dropdown-button">
+                    <Link to="">
+                      <span className="profile-link">
+                        <img src={"" + (currProfile && currProfile.avatar)} />
+                      </span>
+                    </Link>
+                    <span className="caret" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          }
         </header>
       </div>
       {!currProfile && <ProfilesGate setCurrProfile={setCurrProfile} />}
