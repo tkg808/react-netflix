@@ -2,15 +2,6 @@ div.browse-page
 {
   width: 100%;
   min-height: 2000px;
-  /* position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   background: #141414;
 }
 
@@ -18,7 +9,6 @@ div.browse-page
 
 div.browse-page div.pinned-header-container
 {
-  /* width: 100%; */
   height: 70px;
   position: fixed;
   top: 0;
@@ -34,17 +24,14 @@ div.browse-page header
   width: 100%;
   height: 68px;
   padding: 0 4%;
+  position: relative;
   display: flex;
   align-items: center;
-  color: white
 }
 
 div.browse-page header 
 a.logo-link
 {
-  /* height: 68px; */
-  /* display: flex;
-  align-items: center; */
   margin-right: 5px;
   display: inline-block;
 }
@@ -54,32 +41,109 @@ a.logo-link > svg
 {
   width: 92.5px;
   height: 31px;
-  /* max-width: 92.5px;
-  max-height: 31px; */
   fill: #e50914;
 }
 
-/* === Nav === */
+/* === Primary Nav === */
 
-div.browse-page nav.tabbed-nav 
-ul
+div.browse-page 
+ul.primary-nav
 {
   display: flex;
   align-items: center;
-  color: #fff;
 }
 
-div.browse-page nav.tabbed-nav 
-ul > li
+div.browse-page ul.primary-nav 
+li
 {
   margin-left: 18px;
   list-style: none;
-  color: #fff;
-  font-size: 1.2rem;
 }
 
-div.browse-page nav.tabbed-nav 
-ul > li > a
+div.browse-page ul.primary-nav 
+li.nav-menu
 {
-  color: #fff;
+  display: none;
+}
+
+div.browse-page ul.primary-nav 
+li > a
+{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #e5e5e5;
+  transition: color 0.4s;
+}
+
+/* === Secondary Nav === */
+
+div.browse-page
+div.secondary-nav
+{
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 4%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+div.browse-page div.secondary-nav 
+div.nav-element:not(:last-child)
+{
+  margin-right: 10px;
+}
+
+/* === Account Menu Item === */
+
+div.browse-page 
+div.account-menu-item
+{
+  position: relative;
+}
+
+div.browse-page 
+div.account-dropdown-button
+{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+div.browse-page div.account-dropdown-button 
+a
+{
+  position: relative;
+  display: block;
+  /* z-index: -1; */
+}
+
+div.browse-page div.account-dropdown-button 
+span.profile-link
+{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+div.browse-page div.account-dropdown-button 
+span.profile-link > img
+{
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+div.browse-page div.account-dropdown-button 
+span.caret
+{
+  margin-left: 10px;
+  border-color: #fff transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
 }
