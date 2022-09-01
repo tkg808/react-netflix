@@ -98,6 +98,77 @@ div.nav-element:not(:last-child)
   margin-right: 10px;
 }
 
+/* === Search Box === */
+
+div.browse-page div.search-box
+{
+  width: auto;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  transition: width 0.5s;
+}
+
+div.browse-page div.search-box 
+button.search-tab
+{
+  width: 36px;
+  padding: 0 6px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+div.browse-page div.search-box 
+input#secondary-nav-search-input
+{
+  width: 0;
+  height: 34px;
+  font-size: 14px;
+  line-height: 34px;
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+  transition: width 0.5s;
+}
+
+/* === Search Box - Open === */
+
+div.browse-page div.search-box.open
+{
+  border: 1px solid hsla(0, 0%, 100%, 0.85);
+}
+
+div.browse-page div.search-box 
+input#secondary-nav-search-input.open
+{
+  width: 212px;
+  padding: 7px 14px 7px 7px;
+}
+
+div.browse-page div.search-box 
+span.icon-close
+{
+  width: 18px;
+  height: 20px;
+  margin: 0 3px;
+  color: white;
+  display: flex;
+}
+
+div.browse-page div.search-box 
+span.icon-close svg
+{
+  width: 18px;
+  height: 20px;
+  color: white;
+  cursor: pointer;
+  stroke-width: 0.5;
+}
+
 /* === Account Menu Item === */
 
 div.browse-page 
@@ -119,7 +190,6 @@ a
 {
   position: relative;
   display: block;
-  /* z-index: -1; */
 }
 
 div.browse-page div.account-dropdown-button 

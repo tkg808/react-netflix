@@ -6,6 +6,7 @@ import { LogoIcon } from '../../res/LogoIcon';
 import { SearchIcon } from '../../res/SearchIcon';
 import { BellIcon } from '../../res/BellIcon';
 import { tabsDataList } from '../../res/tabsDataList';
+import { CgClose } from 'react-icons/cg';
 
 interface Profile
 {
@@ -17,6 +18,18 @@ interface Profile
 export default function Browse()
 {
   const [currProfile, setCurrProfile] = useState<Profile | null>(null);
+  const [searchInput, setSearchInput] = useState<string>("")
+  const [searchFocused, setSearchFocused] = useState<boolean>(false);
+
+  function searchClick(): void
+  {
+    setSearchFocused(!searchFocused);
+  }
+
+  function resetInput(): void
+  {
+    setSearchInput("");
+  }
 
   return (
     <div className="browse-page">
@@ -43,10 +56,31 @@ export default function Browse()
           {
             currProfile && <div className="secondary-nav">
               <div className="nav-element">
-                <div className="search-box">
-                  <button className="search-tab">
+                <div className={"search-box" +
+                  (searchFocused ? " open" : " close")}>
+                  <button
+                    className={"search-tab" + (searchFocused ? " open" : " close")}
+                    onClick={searchClick}
+                    disabled={searchInput.length > 0}>
                     <SearchIcon />
                   </button>
+                  <form className="search">
+                    <label htmlFor="secondary-nav-search-input" />
+                    <input
+                      type="text" id="secondary-nav-search-input"
+                      className={(searchFocused ? "open" : "close")}
+                      placeholder="Titles, people, genres"
+                      value={searchInput}
+                      onChange={(e) => setSearchInput(e.target.value)}
+                      onBlur={() => !searchInput && searchClick()}
+                    />
+                  </form>
+                  {
+                    searchFocused &&
+                    <span className="icon-close">
+                      {searchInput && <CgClose onClick={resetInput} />}
+                    </span>
+                  }
                 </div>
               </div>
               <div className="nav-element">
@@ -72,8 +106,9 @@ export default function Browse()
             </div>
           }
         </header>
-      </div>
-      {!currProfile && <ProfilesGate setCurrProfile={setCurrProfile} />}
+      </div >
+      {!currProfile && <ProfilesGate setCurrProfile={setCurrProfile} />
+      }
     </div >
   );
 }
